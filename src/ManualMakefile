@@ -1,0 +1,93 @@
+########################################################
+#
+# Makefile for Fontaine font analysis program
+# Copyright (c) 2009 by Edward H. Trager
+# All Rights Reserved
+# Released under GPL v. 2 or later
+# 
+#
+########################################################
+
+########################################################
+#
+# COMPILER
+#
+########################################################
+CC = g++
+CFLAGS = -g -Wall
+
+########################################################
+#
+# XML2 :
+#
+########################################################
+XML2_CFLAGS=`xml2-config --cflags`
+XML2_LIBS=`xml2-config --libs`
+
+########################################################
+#
+# FREETYPE2 :
+#
+########################################################
+FREETYPE2_CFLAGS=`freetype-config --cflags`
+FREETYPE2_LIBS=`freetype-config --libs`
+
+OBJECTS = main.o         \
+          CLP.o          \
+          Debug.o        \
+          Encoding.o     \
+          Exception.o    \
+          FontFace.o     \
+          FontLibrary.o  \
+          Message.o      \
+          OrthographyResults.o \
+          Utf8String.o   \
+          Warning.o      
+
+
+all: $(OBJECTS)
+	$(CC) $(CFLAGS) -o fontaine $(OBJECTS) $(FREETYPE2_LIBS)
+
+CLP.o: CLP.cpp
+	$(CC) $(CFLAGS) -c CLP.cpp
+
+Debug.o: Debug.cpp
+	$(CC) $(CFLAGS) -c Debug.cpp
+
+Encoding.o: Encoding.cpp
+	$(CC) $(CFLAGS) -c Encoding.cpp
+
+Exception.o: Exception.cpp
+	$(CC) $(CFLAGS) -c Exception.cpp
+
+FontFace.o: FontFace.cpp orthographies/orthographies.h
+	$(CC) $(CFLAGS) $(FREETYPE2_CFLAGS) -c FontFace.cpp
+
+FontLibrary.o: FontLibrary.cpp
+	$(CC) $(CFLAGS) $(FREETYPE2_CFLAGS) -c FontLibrary.cpp
+
+Message.o: Message.cpp
+	$(CC) $(CFLAGS) -c Message.cpp
+
+OrthographyResults.o: OrthographyResults.cpp
+	$(CC) $(CFLAGS) -c OrthographyResults.cpp
+
+Utf8String.o: Utf8String.cpp
+	$(CC) $(CFLAGS) -c Utf8String.cpp
+
+Warning.o: Warning.cpp
+	$(CC) $(CFLAGS) -c Warning.cpp
+
+main.o: main.cpp
+	$(CC) $(CFLAGS) $(FREETYPE2_CFLAGS) -c main.cpp
+
+clean:
+	rm -f *.o
+	rm -f fontaine
+
+tidy: clean
+	rm -f *.bak
+
+package: tidy
+	cd ../../ && tar czvf fontaine.tar.gz fontaine
+

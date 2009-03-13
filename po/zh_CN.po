@@ -1,0 +1,21 @@
+# FONTAINE 
+# Copyright (C) 2009 by Edward H. Trager <ed.trager@gmail.com>
+# This file is distributed under the same license as the Fontaine software.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FONTAINE\n"
+"Report-Msgid-Bugs-To: ed.trager@gmail.com\n"
+"POT-Creation-Date: 2009-02-26 16:00-0500\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Edward H. Trager <ed.trager@gmail.com>\n"
+"Language-Team: LANGUAGE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Copyright ⓒ 2009 by Edward H. Trager.  All Rights Reserved. Released under GPL v. 2 or later."
+msgstr "版权 ⓒ 2009 年由 Edward H. Trager  (车蔼)。著作权所有。授权根据 GPL 2.0 或更新的版本。"
+
+

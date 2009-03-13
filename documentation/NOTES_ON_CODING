@@ -1,0 +1,90 @@
+
+                               FONTAINE
+                            NOTES ON CODING
+                          by Edward H. Trager
+                          Ann Arbor, Michigan
+                              2009.01.19
+
+
+STYLE
+=====
+
+Here are the basic principles I've tried to adhere to in the code:
+
+ (1) The "KISS" ("Keep It Simple Stupid") programming principle.
+ 
+ (2) Use of the Standard C++ Template Library (STL) containers whenever
+     possible.
+
+ (3) Use of the simplest data container possible to complete any specific
+     task.  For example, I will happily use "const char *" if it gets the
+     job done, but will switch to "std::string" or "Utf8String" when
+     necessary. 
+     
+ (4) Use of UTF-8 as the primary encoding for Unicode strings.  I've 
+     written more about string treatment below.
+
+STRINGS
+=======
+
+All strings in the program are Unicode strings.  Never assume ASCII!
+What you can assume is that strings are in Unicode UTF-8 transformation
+format unless otherwise noted.
+
+In other words, all "char *" and "std::string" strings are understood to
+actually be UTF-8 strings even though they are not explicitely marked as
+such.
+
+When required, a specific string container such as "Utf8String" or
+"basic_string<UTF16>" or "std::basic_string<UTF32>" will be used.  
+
+For example, if it is necessary to extract a substring from another string, 
+then "Utf8String" will be used because the Utf8String class knows how to
+count characters in a UTF-8 string.  std::string does not know how to do
+that.
+
+Likewise, if it is necessary to extract a string from a field in a 
+Microsoft-style TrueType or OpenType font file, then 
+"std::basic_string<UTF16>" will likely be used.  The "Utf8String" class
+has constructors and methods for dealing with the conversion of UTF-16 and
+UTF-32 to UTF-8.
+
+ORTHOGRAPHY DATA
+================
+
+An "orthography" in Fontaine may represent an "orthographic group" such
+as "Western Latin" covering many languages or, alternatively, an 
+orthography used primarily for a single language such as "Thai" or
+"Japanese".
+
+Orthography data are in the "src/orthographies" subdirectory. The
+OrthographyData class is a very simple container class (a struct 
+would do) with public members. Namespaces are used to distinguish 
+individual orthographies.  
+
+It is a simple matter to copy the "template.h" file 
+in the "src/orthographies" directory, assign new namespaces, and fill
+in the missing data needed for additional orthographies.
+
+Be sure to vet what you think the orthography is against real-world
+fonts.  A good dose of Reality is often needed.
+
+After adding new orthographies, be sure to update "orthographies.h"
+as well as the relevant orthography-checking code in FontFace.cpp. It
+is very easy to do.
+
+LICENSE DATA
+============
+
+License data are in the "src/licenses" subdirectory.  The "LicenseData"
+class is a very simple container class (a struct would do) with public 
+members.  Namespaces are used to distinguish individual licenses.
+
+It is a simple matter to copy the "template.h" file 
+in the "src/licenses" directory, assign new namespaces, and fill
+in the missing data needed for additional licenses.
+
+After adding a new license, be sure to update "licenses.h"
+as well as the relevant license-checking code in FontFace.cpp. It
+is very easy to do.
+
