@@ -103,4 +103,5 @@
 #include "Bengali.h"
 #include "Devanagari.h"
 #include "Kannada.h"
+#include "Tamil.h"
 

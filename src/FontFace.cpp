@@ -490,6 +490,7 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Bengali::pData);
 	_checkOrthography(Devanagari::pData);
 	_checkOrthography(Kannada::pData);
+	_checkOrthography(Tamil::pData);
 	
 }
 

@@ -25,19 +25,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /usr/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E remove -f
+RM = /usr/bin/cmake -E remove -f
 
 # The program to use to edit the cache.
-CMAKE_EDIT_COMMAND = /usr/local/bin/ccmake
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/edtrager/fontaine2
+CMAKE_SOURCE_DIR = /home/edtrager/fontaine/trunk
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/edtrager/fontaine2
+CMAKE_BINARY_DIR = /home/edtrager/fontaine/trunk
 
 # Include the progress variables for this target.
 include CMakeFiles/progress.make
@@ -48,7 +48,7 @@ include CMakeFiles/progress.make
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	cd /home/edtrager/fontaine2/po && /usr/local/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	cd /home/edtrager/fontaine/trunk/po && /usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
@@ -56,17 +56,17 @@ edit_cache/fast: edit_cache
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	cd /home/edtrager/fontaine2/po && /usr/local/bin/cmake -P cmake_install.cmake
+	cd /home/edtrager/fontaine/trunk/po && /usr/bin/cmake -P cmake_install.cmake
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	cd /home/edtrager/fontaine2/po && /usr/local/bin/cmake -P cmake_install.cmake
+	cd /home/edtrager/fontaine/trunk/po && /usr/bin/cmake -P cmake_install.cmake
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	cd /home/edtrager/fontaine2/po && /usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	cd /home/edtrager/fontaine/trunk/po && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 
 # Special rule for the target install/local
 install/local/fast: install/local
@@ -81,31 +81,31 @@ list_install_components/fast: list_install_components
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	cd /home/edtrager/fontaine2/po && /usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	cd /home/edtrager/fontaine/trunk/po && /usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/edtrager/fontaine2 && $(CMAKE_COMMAND) -E cmake_progress_start /home/edtrager/fontaine2/CMakeFiles $(CMAKE_ALL_PROGRESS)
-	cd /home/edtrager/fontaine2 && $(MAKE) -f CMakeFiles/Makefile2 po/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/edtrager/fontaine2/CMakeFiles 0
+	cd /home/edtrager/fontaine/trunk && $(CMAKE_COMMAND) -E cmake_progress_start /home/edtrager/fontaine/trunk/CMakeFiles $(CMAKE_ALL_PROGRESS)
+	cd /home/edtrager/fontaine/trunk && $(MAKE) -f CMakeFiles/Makefile2 po/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/edtrager/fontaine/trunk/CMakeFiles 0
 
 # The main clean target
 clean:
-	cd /home/edtrager/fontaine2 && $(MAKE) -f CMakeFiles/Makefile2 po/clean
+	cd /home/edtrager/fontaine/trunk && $(MAKE) -f CMakeFiles/Makefile2 po/clean
 
 # The main clean target
 clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/edtrager/fontaine2 && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
+	cd /home/edtrager/fontaine/trunk && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/edtrager/fontaine2 && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
+	cd /home/edtrager/fontaine/trunk && $(MAKE) -f CMakeFiles/Makefile2 po/preinstall
 
 # clear depends
 depend:
@@ -113,14 +113,14 @@ depend:
 
 # Convenience name for target.
 po/CMakeFiles/translations.dir/rule:
-	cd /home/edtrager/fontaine2 && $(MAKE) -f CMakeFiles/Makefile2 po/CMakeFiles/translations.dir/rule
+	cd /home/edtrager/fontaine/trunk && $(MAKE) -f CMakeFiles/Makefile2 po/CMakeFiles/translations.dir/rule
 
 # Convenience name for target.
 translations: po/CMakeFiles/translations.dir/rule
 
 # fast build rule for target.
 translations/fast:
-	cd /home/edtrager/fontaine2 && $(MAKE) -f po/CMakeFiles/translations.dir/build.make po/CMakeFiles/translations.dir/build
+	cd /home/edtrager/fontaine/trunk && $(MAKE) -f po/CMakeFiles/translations.dir/build.make po/CMakeFiles/translations.dir/build
 
 # Help Target
 help::
@@ -144,5 +144,5 @@ help::
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/edtrager/fontaine2 && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/edtrager/fontaine/trunk && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 
