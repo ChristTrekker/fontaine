@@ -104,4 +104,11 @@
 #include "Devanagari.h"
 #include "Kannada.h"
 #include "Tamil.h"
+#include "Sinhala.h"
+#include "Telugu.h"
+#include "Malayalam.h"
 
+//
+// Philippine Scripts:
+//
+#include "Hanunoo.h"
