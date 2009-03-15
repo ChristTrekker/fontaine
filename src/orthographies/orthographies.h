@@ -110,7 +110,16 @@
 #include "Gujarati.h"
 #include "Gurmukhi.h"
 #include "Oriya.h"
+
 //
 // Philippine Scripts:
 //
 #include "Hanunoo.h"
+
+//
+// African scripts
+//
+#include "Nko.h"
+#include "Osmanya.h"
+#include "Tifinagh.h"
+#include "Vai.h"

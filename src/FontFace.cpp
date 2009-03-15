@@ -497,8 +497,19 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Gujarati::pData);
 	_checkOrthography(Gurmukhi::pData);
 	_checkOrthography(Oriya::pData);
-
+	
+	//
+	// Philippine scripts
+	//
 	_checkOrthography(Hanunoo::pData);
+	
+	//
+	// African scripts
+	//
+	_checkOrthography(Nko::pData);
+	_checkOrthography(Osmanya::pData);
+	_checkOrthography(Tifinagh::pData);
+	_checkOrthography(Vai::pData);
 	
 }
 
