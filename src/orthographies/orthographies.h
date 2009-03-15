@@ -107,7 +107,9 @@
 #include "Sinhala.h"
 #include "Telugu.h"
 #include "Malayalam.h"
-
+#include "Gujarati.h"
+#include "Gurmukhi.h"
+#include "Oriya.h"
 //
 // Philippine Scripts:
 //

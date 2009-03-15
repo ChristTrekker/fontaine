@@ -494,6 +494,9 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Sinhala::pData);
 	_checkOrthography(Telugu::pData);
 	_checkOrthography(Malayalam::pData);
+	_checkOrthography(Gujarati::pData);
+	_checkOrthography(Gurmukhi::pData);
+	_checkOrthography(Oriya::pData);
 
 	_checkOrthography(Hanunoo::pData);
 	
