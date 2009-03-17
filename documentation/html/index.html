@@ -1,0 +1,387 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+ <head>
+  <title>Fontaine</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="screen" />
+ </head>
+ <body>
+
+ <div id="title">
+ </div>
+
+ <div id="menu">
+  <a href="#what_is_it">What is Fontaine?</a>
+  <a href="#libre">Open Source</a>
+  <a href="#output">Output</a>
+  <a href="#get_it">Getting Fontaine</a>
+  <a href="#usage">Typical Usage</a>
+  <a href="#options">Options</a>
+  <a href="#ortho_groups">Orthography Groups</a>
+  <a href="#"></a>
+  <a href="#"></a>
+  <a href="#"></a>
+ </div>
+
+ <div id="content">
+ 
+  <h1>Fontaine</h1>
+
+  <h2 id="what_is_it" >What is Fontaine?</h2>
+  <p>
+   Fontaine is a command-line utility written by Edward H. Trager that displays key meta information
+   about font files, including but not limited to <i>font name, style,
+   weight, glyph count, character count, copyright, license information</i>
+   and <i>orthographic coverage</i>.
+  </p>
+  
+  <p>
+   Fontaine is copyright 2009 by Edward H. Trager.
+  </p> 
+  
+  <h2 id="libre">Open Source</h2>
+  <p>
+   Fontaine is an Open Source program I wrote initially for the 
+   <a href="http://openfontlibrary.org/">Open Font Library</a> project.  
+   The software is released under the 
+   <a href="http://www.gnu.org/licenses/old-licenses/gpl-2.0.html">GNU General Public License (GPL) v. 2</a>
+   or any later version.
+  </p>
+
+  <h2 id="get_it">Getting Fontaine</h2>
+  
+  <p>
+   Fontaine is now a project on sourceforge:
+  </p>
+  
+  <p class="indented">
+   <a href="http://sourceforge.net/projects/fontaine/">http://sourceforge.net/projects/fontaine/</a>
+  <p>
+   
+  <p>
+   Anyone may obtain the source code for Fontaine from the SVN repository:
+  </p>
+  
+  <p class="code indented">
+   svn co https://fontaine.svn.sourceforge.net/svnroot/fontaine
+  </p>
+  
+  <h2 id="building">Building Fontaine</h2>
+  <p>
+   Fontaine uses the cross-platform <a href="">cmake</a>-based build system:
+  </p>
+  
+  <p class="code indented">
+   cd fontaine/trunk<br/>
+   cmake .<br/>
+   make<br/>
+   su -c "make install"    <i>or</i>     sudo make install<br/>
+  </p>
+   
+  <p>
+   Fontaine is a new program and, as such, has not yet been tested on a large number of platforms.  The software is known
+   to build and run successfully on Linux and OSX.
+  </p>
+
+  <h2 id="usage">Usage</h2>
+  
+  <p class="code indented">
+   fontaine &lt;option(s)&gt; &lt;font file(s)&gt;
+  </p>
+  
+  <p>
+   Typical usage is:
+  </p>
+  
+  <p class="code indented">
+   fontaine --text some_font.ttf<br/>
+   fontaine --xml --hide-missing some_other_font.otf<br/>
+   fontaine --text --hide-fragmentary --show-missing another_font.ttf<br/>
+  </p>
+
+  <h2 id="options">Options</h2>
+  
+  <p>
+   Command-line options are as follows:
+  </p>
+  
+<table>
+ <tr><td colspan="3" class="ttitle">Options</td></tr>
+ <tr><td class="theader">Long</td><td class="theader">Short</td><td class="theader">Description</td></tr> 
+ <tr><td>--fxhtml</td><td>-Y</td><td>Produce output report in FANCY XHTML format.</td></tr>
+ <tr><td>--help</td><td>-h</td><td> Print help and exit</td></tr>
+ <tr><td>--hide-fragmentary</td><td>-r</td><td> Don't report orthographies for which the font provides only fragmentary support.</td></tr>
+ <tr><td>--hide-full</td><td>-f</td><td> Don't report orthographies for which the font provides full support</td></tr>
+ <tr><td>--hide-missing</td><td>-m</td><td> Don't report which Unicode values are missing from fragmentary and partially-supported orthographies.</td></tr>
+ <tr><td>--hide-partial</td><td>-p</td><td> Don't report orthographies for which the font provides only partial support</td></tr>
+ <tr><td>--json</td><td>-J</td><td> Produce output report in JSON format. (default)</td></tr>
+ <tr><td>--show-fragmentary</td><td>-R</td><td> Report orthographies for which the font provides only fragmentary support.</td></tr>
+ <tr><td>--show-full</td><td>-F</td><td> Report orthographies for which the font provides full support</td></tr>
+ <tr><td>--show-missing</td><td>-M</td><td> Report which Unicode values are missing from fragmentary and partially-supported orthographies. (default)</td></tr>
+ <tr><td>--show-partial</td><td>-P</td><td> Report orthographies for which the font provides only partial support</td></tr>
+ <tr><td>--text</td><td>-T</td><td> Produce output report in plain text format.</td></tr>
+ <tr><td>--version</td><td>-v</td><td> Print version and exit</td></tr>
+ <tr><td>--xhtml</td><td>-H</td><td> Produce output report in XHTML format.</td></tr>
+ <tr><td>--xml</td><td>-X</td><td>Produce output report in XML format.</td></tr>
+</table>
+
+  <h2 id="output">Output</h2>
+  <p>  
+   To facilitate different usage scenarios, Fontaine produces reports in
+   JSON (default), XML, XHTML, and TEXT formats.  
+  </p>
+  <p>
+   In the source code tree, there is a
+   base "MLR" ("markup language report") class from which specific
+   reporting classes like JSON and XML are derived.  This architecture
+   should make it easy to create additional report formats if needed.
+  </p>
+  <p>
+   A typical output report in JSON format will look something like this:
+  </p>
+  
+  <pre class="code indented">
+{
+"fonts":[
+  {
+    "commonName":"Inconsolata",
+    "nativeName":"",
+    "subFamily":"Medium",
+    "style":"normal",
+    "weight":"normal",
+    "fixedWidth":"yes",
+    "fixedSizes":"no",
+    "copyright":"Created by Raph Levien using his own tools and FontForge. Copyright ...",
+    "license":"OFL",
+    "licenseUrl":"http://scripts.sil.org/OFL",
+    "glyphCount":"295",
+    "characterCount":"286",
+    "orthographies":[
+      {
+        "commonName":"Basic Latin",
+        "nativeName":"Basic Latin",
+        "supportLevel":"full"
+      },
+      {
+        "commonName":"Western European",
+        "nativeName":"Western European",
+        "supportLevel":"full"
+      },
+      {
+        "commonName":"Euro",
+        "nativeName":"Euro",
+        "supportLevel":"full"
+      },
+      {
+        "commonName":"Turkish",
+        "nativeName":"Türkçe",
+        "supportLevel":"full"
+      },
+      {
+        "commonName":"Central European",
+        "nativeName":"Central European",
+        "supportLevel":"full"
+      },
+      {
+        "commonName":"Pan African Latin",
+        "nativeName":"Pan African Latin",
+        "supportLevel":"fragmentary",
+        "percentCoverage":"24"
+      }
+    ]
+  }
+]}  
+  </pre>
+
+<p>
+Typical output in TEXT format will look something like this:
+</p>
+
+<pre class="code indented">
+Fonts:
+   Font:
+      Common name: id-asobi_LightOT
+      Native name: id-懐遊体Light OT
+      Sub family: Regular
+      Style: normal
+      Weight: normal
+      Fixed width: no
+      Fixed sizes: no
+      Copyright: 井上　優　(　ｉｄｆｏｎｔ・井上デザイン　）
+      License: Unknown or Proprietary License
+      Glyph count: 9354
+      Character count: 8207
+      Orthographies:
+         Orthography:
+            Common name: Basic Latin
+            Native name: Basic Latin
+            Support level: full
+
+         Orthography:
+            Common name: Western European
+            Native name: Western European
+            Support level: full
+
+         Orthography:
+            Common name: Pan African Latin
+            Native name: Pan African Latin
+            Support level: fragmentary
+            Percent coverage: 22
+
+         Orthography:
+            Common name: Basic Greek
+            Native name: Ελληνικό αλφάβητο
+            Support level: fragmentary
+            Percent coverage: 69
+
+         Orthography:
+            Common name: Basic Cyrillic
+            Native name: Кириллица
+            Support level: full
+
+         Orthography:
+            Common name: Traditional Chinese
+            Native name: 中文正體字
+            Support level: partial
+            Percent coverage: 90
+
+         Orthography:
+            Common name: Kana
+            Native name: 仮名
+            Support level: partial
+            Percent coverage: 98
+
+         Orthography:
+            Common name: Joyo
+            Native name: 日本常用漢字
+            Support level: full
+
+         Orthography:
+            Common name: Japanese Jinmeiyo
+            Native name: 日本人名用漢字
+            Support level: partial
+            Percent coverage: 99
+
+         Orthography:
+            Common name: Japanese Kokuji
+            Native name: 日本国字
+            Support level: partial
+            Percent coverage: 88
+
+         Orthography:
+            Common name: Mathematical Operators
+            Native name: Mathematical Operators
+            Support level: fragmentary
+            Percent coverage: 16
+</pre>
+
+   <p>
+     When you want to know what is missing when coverage is less than <i>full</i>, just omit “--hide-missing”
+    or else explicitly use the “--show-missing” option.  Output will look something like the following:
+   </p>
+
+<pre class="code indented">
+        Orthography:
+            Common name: Japanese Kokuji
+            Native name: 日本国字
+            Support level: partial
+            Percent coverage: 88
+            Missing values: U+4e44 (乄), U+6318 (挘), U+685b (桛), U+68bb (梻)
+</pre>
+
+  <h2 id="bugs">Bugs</h2>
+  
+  <p>
+   Currently known bugs and feature omissions:
+  </p>
+  
+<table>
+ <tr><td colspan="3" class="ttitle">Bugs</td></tr>
+ <tr><td class="theader">Date</td><td class="theader">Description</td><td class="theader">Status</td></tr> 
+ <tr<td>2009-03-17</td><td>i18n: gettext-based localized string replacement not working when last checked ...</td><td>open</td></tr>
+ <tr<td>2009-03-17</td><td>FXHTML: Fancy XHTML report is not yet fully implemented ...</td><td>open</td></tr>
+ <tr<td>2009-03-17</td><td>Reporting: Sample sentences and sample characters are not reported yet ...</td><td>open</td></tr>
+ <tr<td>2009-03-17</td><td>Orthographies: Still missing many orthography files, especially for Unicode 5x ...</td><td>open</td></tr>
+ <tr<td>2009-03-17</td><td>Orthographies: Still missing good sample sentences for many orthographies ...</td><td>open</td></tr>
+</table> 
+
+   
+  <h2 id="ortho_groups">Orthography Groups</h2>
+  
+  <p>
+   Orthographic grouping is a thorny issue.  What do we mean when we say a font 
+   provides coverage for “Western European” languages?  Of course we expect that such a
+   font will coverage the Latin-based orthographies of the “big” languages of Western Europe, 
+   such as <i>English, French, Spanish, German,</i> and so on.  But does that font also provide coverage
+   for the orthographies of minority languages spoken –and presumably also written– in Western
+   Europe?  Maybe not.
+  </p>
+  <p>
+   And that discussion only covers a part of Europe.  What does it mean for a font to 
+   “provide coverage for Chinese”?  Chinese has well over 20,000 characters, but a modern educated
+   Chinese person need only know perhaps 3,500 of those to be considered a fluent reader of his language.
+   So, in classifying a Chinese font, should we require that the font cover 20,000 characters, or just the 
+   most common 3,500?  So far, we haven't even discussed the further complicating issues of <i>simplified</i> vs. 
+   <i>traditional</i> Chinese, or the special characters used in Hong Kong.
+  </p>
+  
+  <p> 
+   Much thought and effort has gone into devising orthographic coverage categories for Fontaine
+   that are generally meaningful to people who are looking at fonts.
+  </p>
+  <p>
+   Here then is a summary of the principles I have tried to adhere to for devising orthographic
+   coverage categories for Fontaine  (Note that these principles might be quite different than the principles 
+   used for other programs such as FontConfig):
+   </p>
+
+  <ul>
+
+   <li> <i>Do not require that  users have intimate familiarity with all of the jargon of ISO standards and
+   Unicode coverage blocks</i>.  As a result, Fontaine has named categories like <i>Western European</i>,
+   <i>Baltic</i>, and <i>Central European</i> instead of <i>ISO-8859-1</i>, <i>ISO-8859-4</i>, and <i>ISO-8859-2</i>.</li>
+
+   <li><i>Create generally meaningful orthography groupings for scripts that cover a large number of language orthographies such as Latin but avoid enumerating individual languages if doing so would result in 
+information overload</i>.  This explains why Fontaine has categories like <i>Western European</i> and <i>Pan African Latin</i>, but not categories for individual languages like <i>French, German, Spanish, English, Scots Gaelic, Languedoc, Icelandic, Faroese, Swedish</i> and so on.</li>
+
+   <li><i>Go ahead and enumerate individual languages for scripts when such enumerations will not 
+   be overwhelming.</i>  This was done with <i>Arabic</i> where for example we have <i>Basic Arabic,
+   Farsi, Urdu, Pashto, Uighur,</i> and  <i>Sindhi, inter alia</i>.</li>
+   <li><i>Break scripts used primarily for a single language down into meaningful groupings if warranted</i>.
+   This was done with <i>Japanese</i>, for example, where the groups <i>Kana</i>, <i>Joyo</i>, <i>Jinmeiyo</i>,
+   and <i>Kokuji</i> represent very meaningful orthographic subcategories to Japanese people.</li>
+  
+    </ul>
+ 
+  
+Fontaine's orthography database includes "sample sentences" and
+"sample characters" for each orthography. For many orthographies, the
+"sample sentence" (or sometimes more than one sentence) is actually a
+pangram.  However, since many orthographies, such as Chinese and
+Japanese, don't support "pangrams" per se, I just use the more general
+term "sample sentence" which works across all orthographies.  I
+provide instances of pangrams for those orthographies where I have
+been able to locate them.  Future community contributions will
+certainly be valuable in expanding and vetting the orthography data
+that I have compiled so far.
+
+The plan is that report output from  Fontaine can be used as input to
+generate a font preview image.  The font preview image can be
+generated from one or more of the sample sentences (pangrams) or
+sample character strings provided by fontaine. A separate program
+--such as PCFP (below)-- is used to create the preview graphic.
+
+I am still thinking about how this last step should best be handled.
+At issue is the fact that most of the good modern Open Source fonts
+provide coverage for a number of different orthographic categories.
+For example, a font like SIL's Gentium covers many different Latin
+orthographies (incl. but not limited to Western Latin, Central
+European, Turkish, and Vietnamese), plus both monotonic and polytonic
+Greek, plus Cyrillic, and more.  So how do you choose one
+representative pangram or sample character string for use as the
+default static font preview ?
+ 
+ 
+ </div> <!-- content -->
+ </body>
+</html>

@@ -1,0 +1,260 @@
+body {
+	
+	position:relative;
+	margin:0;
+	padding:0;
+	padding-top:12px;
+	background-image:url(../images/winter_blue_low.jpg);
+	background-color:#aabbe9;
+	background-position:0 0;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	color:#000;
+	font-family:"DejaVu Sans","Arial",sans-serif;
+	font-size:17px;
+}
+
+#title{
+	position:fixed;
+	margin:0;
+	padding:0;
+	left:0px;
+	right:12px;
+	height:105px;
+	background-image:url(../images/unifontlogo.png);
+	background-position:12px 12px;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+#title p{
+	margin:0px;
+	padding:0px;
+	font-style:oblique;
+	color:#fff;
+	text-align:right;
+	font-size:10px;
+}
+
+#content{
+	
+	position:absolute;
+	margin:0;
+	padding:5px;
+	left:132px;
+	top:125px;
+	right:132px;
+	margin-bottom:12px;
+	border:1px solid #005994;
+	background-color:#fff;
+	z-index:10;
+}
+
+#content h1{
+	
+	font-family:"DejaVu Serif","Times New Roman",serif;
+	font-size:25px;
+	font-style:normal;
+	font-weight:bold;
+	color:#005994;
+	margin:7px;
+	margin-right:15px;
+	margin-bottom:15px;
+	padding:2px;
+	text-align:left;
+	border-bottom:2px solid #00619c;
+	
+}
+
+#content h2{
+	
+	font-family:"DejaVu Serif","Times New Roman",serif;
+	font-size:19px;
+	font-style:normal;
+	font-weight:bold;
+	color:#005994;
+	margin-left:7px;
+	margin-top:23px;
+	margin-right:15px;
+	margin-bottom:15px;
+	padding:2px;
+	text-align:left;
+	
+}
+
+#content p{
+	
+	margin-top:7px;
+	margin-bottom:7px;
+	margin-left:15px;
+	margin-right:15px;
+	padding:0px;
+	
+}
+
+#content .indented{
+	margin-left:1cm;
+	margin-right:1cm;
+	margin-top:5mm;
+	margin-bottom:5mm;
+}
+
+#content .code{
+	color:green;
+	font-family:"DejaVu Sans Mono",monospace;
+	font-size:17px;
+}
+
+#content .description{
+	margin-top:7px;
+	margin-bottom:7px;
+	margin-left:25px;
+	margin-right:25px;
+	font-family:"DejaVu Serif","Times New Roman",Times,serif;
+	font-style:italic;
+}
+
+#content h1 + p:first-letter{
+	
+	font-family:"DejaVu Serif","Times New Roman",serif;
+	font-size:32px;
+	font-style:italic;
+	font-weight:bold;
+	font-weight:normal;
+	color:#005994;
+	
+}
+
+#content a{
+	
+	color:#005994;
+	text-decoration:none;
+	padding:1px;
+	padding-left:2px;
+	padding-right:2px;
+}
+
+#content a:hover{
+	
+	color:#fff;
+	background-color:#00619c;
+	
+}
+
+#content li > a{
+	font-weight:bold;
+}
+
+#menu{
+	
+	position:fixed;
+	margin:0;
+	padding:0;
+	left:12px;
+	top:125px;
+	width:104px;
+	border:1px solid #005994;
+	background-color:#fff;
+	
+}
+
+#menu h1{
+	
+	color:#fff;
+	background-color:#00619c;
+	font-weight:bold;
+	font-style:oblique;
+	font-size:12px;
+	margin:0px;
+	padding:2px;
+	
+}
+
+#menu a{
+	
+	font-size:12px;
+	display:block;
+	color:#005994;
+	font-weight:normal;
+	text-decoration:none;
+	padding:1px;
+	padding-left:2px;
+	padding-right:2px;
+	margin:0px;
+	
+}
+
+
+#menu a:hover{
+	
+	color:#fff;
+	background-color:#00619c;
+	
+}
+
+#menu img{
+	
+	display:block;
+	border:none;
+	margin:0px;
+	padding:0px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+#menu p{
+	
+	padding:0px;
+	margin:2px;
+	margin-top:10px;
+	
+}
+
+.noteBene{
+	font-weight:bold;
+	color:orange;
+}
+
+.floatRight{
+	display:block;
+	margin:12px;
+	margin-top:-45px;
+	border:2px solid #06065a;
+	padding:0;
+	float:right;
+}
+
+table{
+	border-collapse:collapse;
+	border:2px solid #005994;
+	margin:21px;
+}
+
+td{
+	padding:3px;
+	font-size:15px;
+	border:1px solid #005994;
+}
+
+.ttitle{
+	color:#005994;
+	font-weight:bold;
+	text-align:center;
+}
+
+.theader{
+	color:white;
+	background-color:#005994;
+	font-weight:bold;
+	text-align:center;
+	border:1px solid white;
+}
+
+li{
+	margin-top:12px;
+	margin-bottom:12px;
+	margin-left:1cm;
+	margin-right:1cm;
+}
+
