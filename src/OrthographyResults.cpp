@@ -65,7 +65,7 @@ OrthographyResults::SUPPORTLEVEL OrthographyResults::getSupportLevel(void) const
 	
 	if(!_hits) return UNSUPPORTED;
 	if(_hits == _tries) return FULL;
-	if(100*_hits/_tries<80) return FRAGMENTARY;
+	if(100*_hits/_tries<minCoverage) return FRAGMENTARY;
 	else return PARTIAL;
 	
 }

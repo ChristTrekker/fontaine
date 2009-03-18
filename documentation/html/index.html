@@ -290,7 +290,7 @@ Fonts:
 </pre>
 
   <h2 id="bugs">Bugs</h2>
-  
+ 
   <p>
    Currently known bugs and feature omissions:
   </p>
@@ -309,79 +309,91 @@ Fonts:
   <h2 id="ortho_groups">Orthography Groups</h2>
   
   <p>
-   Orthographic grouping is a thorny issue.  What do we mean when we say a font 
+   What do we mean when we say a font 
    provides coverage for “Western European” languages?  Of course we expect that such a
    font will coverage the Latin-based orthographies of the “big” languages of Western Europe, 
    such as <i>English, French, Spanish, German,</i> and so on.  But does that font also provide coverage
    for the orthographies of minority languages spoken –and presumably also written– in Western
-   Europe?  Maybe not.
+   Europe?  It may be difficult to say – it clearly depends on which minority languages we include.
   </p>
   <p>
-   And that discussion only covers a part of Europe.  What does it mean for a font to 
-   “provide coverage for Chinese”?  Chinese has well over 20,000 characters, but a modern educated
-   Chinese person need only know perhaps 3,500 of those to be considered a fluent reader of his language.
-   So, in classifying a Chinese font, should we require that the font cover 20,000 characters, or just the 
-   most common 3,500?  So far, we haven't even discussed the further complicating issues of <i>simplified</i> vs. 
-   <i>traditional</i> Chinese, or the special characters used in Hong Kong.
+   Let's look at a perhaps less familiar case.  What does it mean for a font to 
+   “provide coverage for Chinese”?  Some Chinese dictionaries include well over 40,000 characters, 
+   but a modern educated Chinese person need only know perhaps 3,500 of those to be considered a fluent reader of 
+   his or her language.
+   So, in classifying a Chinese font, should we require that the font cover 40,000 characters, or just the 
+   most common 3,500?
   </p>
   
-  <p> 
-   Much thought and effort has gone into devising orthographic coverage categories for Fontaine
-   that are generally meaningful to people who are looking at fonts.
+  <p>
+   I asked a lot of questions like these as I began sorting out orthographic coverage categories for Fontaine. 
+   I wanted to create categories that would be meaningful to people looking for fonts to meet
+   their needs.  Since I myself can't keep <i>ISO-8859-3</i> vs. <i>ISO-8849-4</i> straight, it seemed 
+   obvious that a first step required avoiding jargon commonly used by standardization bodies. 
   </p>
   <p>
-   Here then is a summary of the principles I have tried to adhere to for devising orthographic
-   coverage categories for Fontaine  (Note that these principles might be quite different than the principles 
-   used for other programs such as FontConfig):
+   Another problem is that adoption rates for scripts vary greatly.
+   Some scripts, like Latin, are now used to write hundreds, perhaps thousands of languages.
+   It seemed evident that creating an orthographic category for every language written in Latin
+   might leave users "drowning" in long reports about hundreds of languages that would be 
+   largely meaningless to them.  The only reasonable answer for pervasive scripts 
+   like Latin would be to create <i>orthographic groups</i>, but these groups would have to be
+   given sensible names like <i>Western European</i> (instead of <i>ISO-8859-1</i>) and <i>Pan African Latin</i>.
+   Such names provide even uninformed users with a pretty good sense of what sorts of languages
+   might be included without burdening them with hundreds of language listings.
+  </p>
+   
+  <p>
+   The orthography work thus required striking a careful balance between opposing forces -- simplicity
+   versus specificity. Those forces operate differently on different scripts.  For pervasive scripts like
+   Latin, one has to tend toward simplicity at the expense of specificity.  For non-pervasive scripts like
+   Japanese, one is at liberty to provide users with a little more detail, such as how well a font
+   covers the indigenously-invented <i>Kokuji</i> "national" characters.  For scripts that fall in the 
+   middle of the pack, like Arabic, providing specific coverage on major languages using 
+   extended versions of the script seemed only prudent.  Thus all Arabic fonts are tested for their
+   coverage of <i>Farsi, Urdu, Pashto, Uighur</i>, and  <i>Sindhi</i>, <i>inter alia</i>.
+  </p>   
+ 
+  <h2>Orthographic Coverage Levels</h2>
+   
+  <p>
+   Fontaine divides coverage into four levels:
+  </p>
+   
+   <table>
+    <tr><td class="theader">Level</td><td class="theader">Coverage</td></tr>
+    <tr><td>Full</td><td>100%</td></tr>
+    <tr><td>Partial</td><td>Greater than or equal to 80%</td></tr>
+    <tr><td>Fragmentary</td><td>Less than 80%</td></tr>
+    <tr><td>None</td><td>0% or missing the key character</td></tr>
+   </table>
+   
+  <p>
+   Fontaine first looks for a key character (such as the letter <i>A</i> in Latin) that 
+   is always expected to be present in a given orthography.
+   If the key character is missing, the program skips additional checks for that orthography.  This can
+   theoretically lead to false negatives in rare cases, but the occurrence of such a false negative almost
+   guarantees that something is amiss with the font anyway.  If the key
+   character is present, a full check is made.  If fewer than 80% of the characters needed for an orthography
+   are present, coverage is classified as <i>fragmentary</i>.  Incomplete coverage greater than or equal to 80%
+   is called <i>partial</i>.
+  </p>
+   
+   <h2>Sample Sentences</h2>
+
+   <p>
+    Fontaine's orthography database includes "sample sentences" and
+    "sample characters" for each orthography. For many orthographies, the
+    "sample sentence" (or sometimes more than one sentence) is actually a
+    pangram.  However, since many orthographies, such as Chinese and
+    Japanese, don't support "pangrams" per se, I just use the more general
+    term "sample sentence" which works across all orthographies.  I
+    provide instances of pangrams for those orthographies where I have
+    been able to locate them.  Future community contributions will
+    certainly be valuable in expanding and vetting the orthography data
+    that I have compiled so far.
    </p>
-
-  <ul>
-
-   <li> <i>Do not require that  users have intimate familiarity with all of the jargon of ISO standards and
-   Unicode coverage blocks</i>.  As a result, Fontaine has named categories like <i>Western European</i>,
-   <i>Baltic</i>, and <i>Central European</i> instead of <i>ISO-8859-1</i>, <i>ISO-8859-4</i>, and <i>ISO-8859-2</i>.</li>
-
-   <li><i>Create generally meaningful orthography groupings for scripts that cover a large number of language orthographies such as Latin but avoid enumerating individual languages if doing so would result in 
-information overload</i>.  This explains why Fontaine has categories like <i>Western European</i> and <i>Pan African Latin</i>, but not categories for individual languages like <i>French, German, Spanish, English, Scots Gaelic, Languedoc, Icelandic, Faroese, Swedish</i> and so on.</li>
-
-   <li><i>Go ahead and enumerate individual languages for scripts when such enumerations will not 
-   be overwhelming.</i>  This was done with <i>Arabic</i> where for example we have <i>Basic Arabic,
-   Farsi, Urdu, Pashto, Uighur,</i> and  <i>Sindhi, inter alia</i>.</li>
-   <li><i>Break scripts used primarily for a single language down into meaningful groupings if warranted</i>.
-   This was done with <i>Japanese</i>, for example, where the groups <i>Kana</i>, <i>Joyo</i>, <i>Jinmeiyo</i>,
-   and <i>Kokuji</i> represent very meaningful orthographic subcategories to Japanese people.</li>
-  
-    </ul>
- 
-  
-Fontaine's orthography database includes "sample sentences" and
-"sample characters" for each orthography. For many orthographies, the
-"sample sentence" (or sometimes more than one sentence) is actually a
-pangram.  However, since many orthographies, such as Chinese and
-Japanese, don't support "pangrams" per se, I just use the more general
-term "sample sentence" which works across all orthographies.  I
-provide instances of pangrams for those orthographies where I have
-been able to locate them.  Future community contributions will
-certainly be valuable in expanding and vetting the orthography data
-that I have compiled so far.
-
-The plan is that report output from  Fontaine can be used as input to
-generate a font preview image.  The font preview image can be
-generated from one or more of the sample sentences (pangrams) or
-sample character strings provided by fontaine. A separate program
---such as PCFP (below)-- is used to create the preview graphic.
-
-I am still thinking about how this last step should best be handled.
-At issue is the fact that most of the good modern Open Source fonts
-provide coverage for a number of different orthographic categories.
-For example, a font like SIL's Gentium covers many different Latin
-orthographies (incl. but not limited to Western Latin, Central
-European, Turkish, and Vietnamese), plus both monotonic and polytonic
-Greek, plus Cyrillic, and more.  So how do you choose one
-representative pangram or sample character string for use as the
-default static font preview ?
- 
- 
+    
  </div> <!-- content -->
  </body>
 </html>
