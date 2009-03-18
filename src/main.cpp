@@ -54,7 +54,7 @@ int main(int argc, const char *argv[]){
 	clp.addSwitch("--show-fragmentary", "-R" , "Report orthographies for which the font provides only fragmentary support.");
 	clp.addSwitch("--show-partial"    , "-P" , "Report orthographies for which the font provides only partial support");
 	clp.addSwitch("--show-full"       , "-F" , "Report orthographies for which the font provides full support");
-	clp.addSwitch("--hide-missing"    , "-m" , "Don't report which Unicode values are missing from fragmentary and partially-supported orthographies. (default)");
+	clp.addSwitch("--hide-missing"    , "-m" , "Don't report which Unicode values are missing from fragmentary and partially-supported orthographies.");
 	clp.addSwitch("--hide-fragmentary", "-r" , "Don't report orthographies for which the font provides only fragmentary support.");
 	clp.addSwitch("--hide-partial"    , "-p" , "Don't report orthographies for which the font provides only partial support");
 	clp.addSwitch("--hide-full"       , "-f" , "Don't report orthographies for which the font provides full support");
