@@ -24,6 +24,7 @@
 //
 
 #include "Exception.h"
+#include <string.h>
 
 const char *Exception::_exceptionSalutation="Unrecoverable Error";
 

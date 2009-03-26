@@ -26,6 +26,7 @@
 
 #include "Message.h"
 #include "config.h"
+#include <string.h>
 
 //
 // Static and Const Members:
