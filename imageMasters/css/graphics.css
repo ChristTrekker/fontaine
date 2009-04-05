@@ -1,10 +1,12 @@
-
+/*                              */
 /* graphics.css * 2009.04.05.ET */
+/*                              */
 
 .icon{
 	width:24px;
 	height:24px;
 	float:left;
+	margin:1px;
 }
 
 .full{
@@ -23,285 +25,282 @@
 }
 
 .Afrikaans{
-	background-position:0   0;
+	background-position:0px 0px;
 }
 
 .Arabic{
-	background-position:-24 0;
+	background-position:-24px 0px;
 }
 
 .ArchaicGreekLetters{
-	background-position:-48 0;
+	background-position:-48px 0px;
 }
 
 .Armenian{
-	background-position:-72 0;
+	background-position:-72px 0px;
 }
 
 .Baltic{
-	background-position:-96 0;
+	background-position:-96px 0px;
 }
 
 .BasicCyrillic{
-	background-position:-120 0;
+	background-position:-120px 0px;
 }
 
 .BasicGreek{
-	background-position:-144 0;
+	background-position:-144px 0px;
 }
 
 .BasicLatin{
-	background-position:-168 0;
+	background-position:-168px 0px;
 }
 
 .Bengali{
-	background-position:-192 0;
+	background-position:-192px 0px;
 }
 
 .CanadianSyllabics{
-	background-position:-216 0;
+	background-position:-216px 0px;
 }
 
 .Catalan{
-	background-position:-240 0;
+	background-position:-240px 0px;
 }
 
 .CentralEuropean{
-	background-position:-264 0;
+	background-position:-264px 0px;
 }
 
 .Cherokee{
-	background-position:-288 0;
+	background-position:-288px 0px;
 }
 
 .ChessSymbols{
-	background-position:-312 0;
+	background-position:-312px 0px;
 }
 
 .ClaudianLetters{
-	background-position:-336 0;
+	background-position:-336px 0px;
 }
 
 .Coptic{
-	background-position:-360 0;
+	background-position:-360px 0px;
 }
 
 .Devanagari{
-	background-position:0 -24;
+	background-position:0px -24px;
 }
 
 .Dutch{
-	background-position:-24 -24;
+	background-position:-24px -24px;
 }
 
 .Euro{
-	background-position: -24;
+	background-position:-48px -24px;
 }
 
 .ExtendedArabic{
-	background-position: -24;
+	background-position:-72px -24px;
 }
 
 .Farsi{
-	background-position: -24;
+	background-position:-96px -24px;
 }
 
 .Georgian{
-	background-position: -24;
+	background-position:-120px -24px;
 }
 
 .Gujarati{
-	background-position: -24;
+	background-position:-144px -24px;
 }
 
 .Gurmukhi{
-	background-position: -24;
+	background-position:-168px -24px;
 }
 
 .Hangul{
-	background-position: -24;
+	background-position:-192px -24px;
 }
 
 .Hanunoo{
-	background-position: -24;
+	background-position:-216px -24px;
 }
 
 .Hebrew{
-	background-position: -24;
+	background-position:-240px -24px;
 }
 
 .HKSCS{
-	background-position: -24;
+	background-position:-264px -24px;
 }
 
 .IPA{
-	background-position: -24;
+	background-position:-288px -24px;
 }
 
 .Jinmeiyo{
-	background-position: -24;
+	background-position:-312px -24px;
 }
 
 .Joyo{
-	background-position: -24;
+	background-position:-336px -24px;
 }
 
 .Kana{
-	background-position: -24;
+	background-position:-360px -24px;
 }
 
 .Kannada{
-	background-position: ;
+	background-position:0px -48px;
 }
 
 .Kazakh{
-	background-position: ;
+	background-position:-24px -48px;
 }
 
 .Khmer{
-	background-position: ;
+	background-position:-48px -48px;
 }
 
 .Kokuji{
-	background-position: ;
+	background-position:-72px -48px;
 }
 
 .Lao{
-	background-position: ;
+	background-position:-96px -48px;
 }
 
 .LatinLigatures{
-	background-position: ;
+	background-position:-120px -48px;
 }
 
 .Malayalam{
-	background-position: ;
+	background-position:-144px -48px;
 }
 
 .MathematicalOperators{
-	background-position: ;
+	background-position:-168px -48px;
 }
 
 .Myanmar{
-	background-position: ;
+	background-position:-192px -48px;
 }
 
 .Nko{
-	background-position: ;
+	background-position:-216px -48px;
 }
 
 .Ogham{
-	background-position: ;
+	background-position:-240px -48px;
 }
 
 .Oriya{
-	background-position: ;
+	background-position:-264px -48px;
 }
 
 .Osmanya{
-	background-position: ;
+	background-position:-288px -48px;
 }
 
 .PanAfricanLatin{
-	background-position: ;
+	background-position:-312px -48px;
 }
 
 .Pashto{
-	background-position: ;
+	background-position:-336px -48px;
 }
 
 .Pinyin{
-	background-position: ;
+	background-position:-360px -48px;
 }
 
 .PolytonicGreek{
-	background-position: ;
+	background-position:0px -72px;
 }
 
 .Romanian{
-	background-position: ;
+	background-position:-24px -72px;
 }
 
 .Runic{
-	background-position: ;
+	background-position:-48px -72px;
 }
 
 .SimplifiedChinese{
-	background-position: ;
+	background-position:-72px -72px;
 }
 
 .Sindhi{
-	background-position: ;
+	background-position:-96px -72px;
 }
 
 .Sinhala{
-	background-position: ;
+	background-position:-120px -72px;
 }
 
 .Syriac{
-	background-position: ;
+	background-position:-144px -72px;
 }
 
 .Tamil{
-	background-position: ;
+	background-position:-168px -72px;
 }
 
 .Telugu{
-	background-position: ;
-}
-
-.template{
-	background-position: ;
+	background-position:-192px -72px;
 }
 
 .Thaana{
-	background-position: ;
+	background-position:-216px -72px;
 }
 
 .Thai{
-	background-position: ;
+	background-position:-240px -72px;
 }
 
 .Tibetan{
-	background-position: ;
+	background-position:-264px -72px;
 }
 
 .Tifinagh{
-	background-position: ;
+	background-position:-288px -72px;
 }
 
 .TraditionalChinese{
-	background-position: ;
+	background-position:-312px -72px;
 }
 
 .Turkish{
-	background-position: ;
+	background-position:-336px -72px;
 }
 
 .Uighur{
-	background-position: ;
+	background-position:-360px -72px;
 }
 
 .Urdu{
-	background-position: ;
+	background-position:0px -96px;
 }
 
 .Vai{
-	background-position: ;
+	background-position:-24px -96px;
 }
 
 .Vietnamese{
-	background-position: ;
+	background-position:-48px -96px;
 }
 
 .WesternEuropean{
-	background-position: ;
+	background-position:-72px -96px;
 }
 
 .Yi{
-	background-position: ;
+	background-position:-96px -96px;
 }
 
 .ZhuYinFuHao{
-	background-position: ;
+	background-position:-120px -96px;
 }
+
