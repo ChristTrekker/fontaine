@@ -1,0 +1,307 @@
+
+/* graphics.css * 2009.04.05.ET */
+
+.icon{
+	width:24px;
+	height:24px;
+	float:left;
+}
+
+.full{
+	background-image:url("../images/full.png");
+	background-repeat:no-repeat;
+}
+
+.partial{
+	background-image:url("../images/partial.png");
+	background-repeat:no-repeat;
+}
+
+.fragmentary{
+	background-image:url("../images/fragmentary.png");
+	background-repeat:no-repeat;
+}
+
+.Afrikaans{
+	background-position:0   0;
+}
+
+.Arabic{
+	background-position:-24 0;
+}
+
+.ArchaicGreekLetters{
+	background-position:-48 0;
+}
+
+.Armenian{
+	background-position:-72 0;
+}
+
+.Baltic{
+	background-position:-96 0;
+}
+
+.BasicCyrillic{
+	background-position:-120 0;
+}
+
+.BasicGreek{
+	background-position:-144 0;
+}
+
+.BasicLatin{
+	background-position:-168 0;
+}
+
+.Bengali{
+	background-position:-192 0;
+}
+
+.CanadianSyllabics{
+	background-position:-216 0;
+}
+
+.Catalan{
+	background-position:-240 0;
+}
+
+.CentralEuropean{
+	background-position:-264 0;
+}
+
+.Cherokee{
+	background-position:-288 0;
+}
+
+.ChessSymbols{
+	background-position:-312 0;
+}
+
+.ClaudianLetters{
+	background-position:-336 0;
+}
+
+.Coptic{
+	background-position:-360 0;
+}
+
+.Devanagari{
+	background-position:0 -24;
+}
+
+.Dutch{
+	background-position:-24 -24;
+}
+
+.Euro{
+	background-position: -24;
+}
+
+.ExtendedArabic{
+	background-position: -24;
+}
+
+.Farsi{
+	background-position: -24;
+}
+
+.Georgian{
+	background-position: -24;
+}
+
+.Gujarati{
+	background-position: -24;
+}
+
+.Gurmukhi{
+	background-position: -24;
+}
+
+.Hangul{
+	background-position: -24;
+}
+
+.Hanunoo{
+	background-position: -24;
+}
+
+.Hebrew{
+	background-position: -24;
+}
+
+.HKSCS{
+	background-position: -24;
+}
+
+.IPA{
+	background-position: -24;
+}
+
+.Jinmeiyo{
+	background-position: -24;
+}
+
+.Joyo{
+	background-position: -24;
+}
+
+.Kana{
+	background-position: -24;
+}
+
+.Kannada{
+	background-position: ;
+}
+
+.Kazakh{
+	background-position: ;
+}
+
+.Khmer{
+	background-position: ;
+}
+
+.Kokuji{
+	background-position: ;
+}
+
+.Lao{
+	background-position: ;
+}
+
+.LatinLigatures{
+	background-position: ;
+}
+
+.Malayalam{
+	background-position: ;
+}
+
+.MathematicalOperators{
+	background-position: ;
+}
+
+.Myanmar{
+	background-position: ;
+}
+
+.Nko{
+	background-position: ;
+}
+
+.Ogham{
+	background-position: ;
+}
+
+.Oriya{
+	background-position: ;
+}
+
+.Osmanya{
+	background-position: ;
+}
+
+.PanAfricanLatin{
+	background-position: ;
+}
+
+.Pashto{
+	background-position: ;
+}
+
+.Pinyin{
+	background-position: ;
+}
+
+.PolytonicGreek{
+	background-position: ;
+}
+
+.Romanian{
+	background-position: ;
+}
+
+.Runic{
+	background-position: ;
+}
+
+.SimplifiedChinese{
+	background-position: ;
+}
+
+.Sindhi{
+	background-position: ;
+}
+
+.Sinhala{
+	background-position: ;
+}
+
+.Syriac{
+	background-position: ;
+}
+
+.Tamil{
+	background-position: ;
+}
+
+.Telugu{
+	background-position: ;
+}
+
+.template{
+	background-position: ;
+}
+
+.Thaana{
+	background-position: ;
+}
+
+.Thai{
+	background-position: ;
+}
+
+.Tibetan{
+	background-position: ;
+}
+
+.Tifinagh{
+	background-position: ;
+}
+
+.TraditionalChinese{
+	background-position: ;
+}
+
+.Turkish{
+	background-position: ;
+}
+
+.Uighur{
+	background-position: ;
+}
+
+.Urdu{
+	background-position: ;
+}
+
+.Vai{
+	background-position: ;
+}
+
+.Vietnamese{
+	background-position: ;
+}
+
+.WesternEuropean{
+	background-position: ;
+}
+
+.Yi{
+	background-position: ;
+}
+
+.ZhuYinFuHao{
+	background-position: ;
+}
