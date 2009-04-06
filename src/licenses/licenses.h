@@ -30,6 +30,7 @@
 #include "ArphicPublic.h"
 #include "Magenta.h"
 #include "Aladdin.h"
+#include "IPA.h"
 
 //
 // Licenses one may debate
