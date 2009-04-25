@@ -97,7 +97,7 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"N'Ko", // Common name
+	"N’Ko", // Common name
 	"ߒߞߏ", // Native name
 	0x07CA, // key
 	values,
