@@ -31,6 +31,7 @@
 #include "Magenta.h"
 #include "Aladdin.h"
 #include "IPA.h"
+#include "Utopia.h"
 
 //
 // Licenses one may debate

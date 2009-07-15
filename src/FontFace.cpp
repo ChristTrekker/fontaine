@@ -612,6 +612,8 @@ void FontFace::_checkLicenses(void){
 				if( _checkLicense(testString,MagentaOpenLicense::pData)) return;
 				if( _checkLicense(testString,AladdinFreePublicLicense::pData)) return;
 				if( _checkLicense(testString,IPALicense::pData)) return;
+				if( _checkLicense(testString,UtopiaLicense::pData)) return;
+				
 				
 				//
 				// Licenses which --subject to debate-- aren't really true 
