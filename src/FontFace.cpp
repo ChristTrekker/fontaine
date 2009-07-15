@@ -605,7 +605,7 @@ void FontFace::_checkLicenses(void){
 				}
 				
 				//
-				// Historical licenses for fonts from specific vendors:
+				// Historical licenses for fonts from specific vendors / projects / organisations:
 				//
 				if( _checkLicense(testString,BitstreamVeraLicense::pData)) return;
 				if( _checkLicense(testString,ArphicPublicLicense::pData)) return;
@@ -613,6 +613,9 @@ void FontFace::_checkLicenses(void){
 				if( _checkLicense(testString,AladdinFreePublicLicense::pData)) return;
 				if( _checkLicense(testString,IPALicense::pData)) return;
 				if( _checkLicense(testString,UtopiaLicense::pData)) return;
+				if( _checkLicense(testString,STIXLicense::pData)) return;
+				if( _checkLicense(testString,MITLicense::pData)) return;
+				if( _checkLicense(testString,MPLUSLicense::pData)) return;
 				
 				
 				//

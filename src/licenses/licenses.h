@@ -21,10 +21,15 @@
 #include "GPLWithFontException.h"
 #include "LGPL.h"
 
+// Common for X11 Fonts:
+#include "MIT.h"
+
 //
 // Licenses specific to very 
 // limited sets of fonts from
-// specific vendors:
+// specific vendors. They are 
+// project and organisation-specific
+// and so discouraged/deprecated:
 // 
 #include "BitstreamVera.h"
 #include "ArphicPublic.h"
@@ -32,6 +37,8 @@
 #include "Aladdin.h"
 #include "IPA.h"
 #include "Utopia.h"
+#include "STIX.h"
+#include "MPLUS.h"
 
 //
 // Licenses one may debate
