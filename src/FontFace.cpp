@@ -616,6 +616,7 @@ void FontFace::_checkLicenses(void){
 				if( _checkLicense(testString,STIXLicense::pData)) return;
 				if( _checkLicense(testString,MITLicense::pData)) return;
 				if( _checkLicense(testString,MPLUSLicense::pData)) return;
+				if( _checkLicense(testString,GUSTLicense::pData)) return;
 				
 				
 				//

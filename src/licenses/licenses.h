@@ -39,6 +39,7 @@
 #include "Utopia.h"
 #include "STIX.h"
 #include "MPLUS.h"
+#include "GUST.h"
 
 //
 // Licenses one may debate
