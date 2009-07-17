@@ -28,6 +28,7 @@ const char *searchKeys[]={
 	"ARPHIC PUBLIC LICENSE",
 	"Arphic Public License",
 	"文鼎公眾授權書",
+	"Arphic",
 	END_OF_LICENSE_NAMES
 };
 

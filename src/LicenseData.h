@@ -17,7 +17,7 @@
 
 #define END_OF_LICENSE_NAMES 0x0000      // Using NULL to mark the end of a set
 
-#define COPYRIGHT_SUMMARY_STRING_LENGTH 70
+#define COPYRIGHT_SUMMARY_STRING_LENGTH 256
 
 //
 // LicenseData

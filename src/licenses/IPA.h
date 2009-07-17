@@ -27,7 +27,8 @@ namespace IPALicense{
 const char *searchKeys[]={
 	"IPA License",
 	"Information-technology Promotion Agency",
-	"IPA",
+	"(IPA)",
+	" IPA ",
 	END_OF_LICENSE_NAMES
 };
 

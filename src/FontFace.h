@@ -102,6 +102,8 @@ private:
 	
 	std::string _copyright; 
 	
+	std::string _licenseURL; // 2009.07.16.ET addendum
+	
 	unsigned _glyphCount;    // Number of glyphs
 	
 	FAMILY  _genericFamily;
@@ -176,7 +178,9 @@ private:
 	bool _checkOrthography( const OrthographyData *pData );
 	void _checkOrthographies(void);
 	
-	bool _checkLicense( std::string &test, const LicenseData *pData);
+	bool _checkLicense( const std::string &test, const LicenseData *pData);
+	bool _checkAllKnownLicenses( const std::string &licenseString);
+	void _storeCopyrightSummary(const std::string &copyrightString);
 	void _checkLicenses(void);
 	
 public:

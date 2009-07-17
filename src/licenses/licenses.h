@@ -23,6 +23,7 @@
 
 // Common for X11 Fonts:
 #include "MIT.h"
+#include "XFree86.h"
 
 //
 // Licenses specific to very 

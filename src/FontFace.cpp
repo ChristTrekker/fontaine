@@ -16,6 +16,7 @@
 
 #include FT_GLYPH_H
 #include FT_TRUETYPE_TABLES_H
+#include FT_TYPE1_TABLES_H
 
 #include "orthographies/orthographies.h"
 #include "licenses/licenses.h"
@@ -228,15 +229,28 @@ UTF8String FontFace::_getPlatform1Encoding0String( unsigned length, const FT_Byt
 //
 UTF8String FontFace::_getStringFromTrueTypeFont(FT_SfntName &fontName) const{
 	
+	// FOR DEBUGGING:
+	//std::cout << "PLATFORM ID  IS " << fontName.platform_id << std::endl;
+	//std::cout << "PLATFORM ENC IS " << fontName.encoding_id << std::endl;
+	
 	if(fontName.platform_id==3 && fontName.encoding_id==1){
+		//
+		// Windows platform: This is the most commonly encountered situation:
+		//
 		return _getPlatform3Encoding1String(fontName.string_len,fontName.string);
-	}else if(fontName.platform_id==1 && fontName.encoding_id==0){
+	}else if(fontName.platform_id==1){
+		//
+		// For Apple OS X, the encoding_id theoretically 
+		// represents different script codes: 0 is for Mac Roman.
+		// To the extent tested, this seems to work even for non-zero encoding IDs:
+		//
 		return _getPlatform1Encoding0String(fontName.string_len,fontName.string);
 	}else{
 		
 		std::ostringstream ss;
 		ss << "Unsupported platform (" << fontName.platform_id << ") and id (" << fontName.encoding_id << ")!";
 		return UTF8String( ss.str() );
+		
 	}
 }
 
@@ -564,81 +578,141 @@ void FontFace::_checkLicenses(void){
 	//
 	_licenseData = UnknownLicense::pData;
 	
+	std::string licenseString;
+	
+	///////////////////////////////////////
+	//
+	// Handle both (1) TrueType/OpenType
+	//         and (2) Type1 fonts
+	//
+	///////////////////////////////////////
 	if(FT_IS_SFNT(_face)){
+		
+		///////////////////////////////
+		//
+		// TrueType / OpenType CASE:
+		//
+		///////////////////////////////
 		
 		FT_UInt count=FT_Get_Sfnt_Name_Count(_face);
 		
 		FT_SfntName fontName;
 		
+		//
+		// Check both the COPYRIGHT (TTF) and LICENSE (OPENTYPE) fields:
+		//
 		for(unsigned j=0;j<count;j++){
 			
 			FT_Get_Sfnt_Name(_face,j,&fontName);
-			
-			if(fontName.name_id==NID_COPYRIGHT || fontName.name_id==NID_LICENSE){
+			if(fontName.name_id==NID_LICENSE || fontName.name_id==NID_COPYRIGHT){
 				
-				std::string testString = _getStringFromTrueTypeFont(fontName);
+				licenseString = _getStringFromTrueTypeFont(fontName);
 				
-				//
-				// Record the first portion of the copyright:
-				//
 				if(fontName.name_id==NID_COPYRIGHT){
+					_storeCopyrightSummary(licenseString);
+				}
+				
+				if(_checkAllKnownLicenses(licenseString)){
 					
-					UTF8String utf8(testString);
-					_copyright = (std::string) utf8.unicodeSubStringOnWordBoundary(1,COPYRIGHT_SUMMARY_STRING_LENGTH);
-					if(utf8.length() >COPYRIGHT_SUMMARY_STRING_LENGTH){
-						_copyright += " ...";
-					}
-				}
-				
-				//
-				// Check license data:
-				//
-				
-				//
-				// First check for the most common Open/Libre font licenses:
-				//
-				if( _checkLicense(testString,OpenFontLicense::pData)) return;
-				if( _checkLicense(testString,GPL::pData)){
-					_checkLicense(testString,LGPL::pData);
-					_checkLicense(testString,GPLWithFontException::pData);
 					return;
+					
 				}
+			}
+			
+			if(fontName.name_id==NID_URL_LICENSE){
 				
-				//
-				// Historical licenses for fonts from specific vendors / projects / organisations:
-				//
-				if( _checkLicense(testString,BitstreamVeraLicense::pData)) return;
-				if( _checkLicense(testString,ArphicPublicLicense::pData)) return;
-				if( _checkLicense(testString,MagentaOpenLicense::pData)) return;
-				if( _checkLicense(testString,AladdinFreePublicLicense::pData)) return;
-				if( _checkLicense(testString,IPALicense::pData)) return;
-				if( _checkLicense(testString,UtopiaLicense::pData)) return;
-				if( _checkLicense(testString,STIXLicense::pData)) return;
-				if( _checkLicense(testString,MITLicense::pData)) return;
-				if( _checkLicense(testString,MPLUSLicense::pData)) return;
-				if( _checkLicense(testString,GUSTLicense::pData)) return;
-				
-				
-				//
-				// Licenses which --subject to debate-- aren't really true 
-				// licenses at all:
-				//
-				if( _checkLicense(testString,Freeware::pData)) return;
-				if( _checkLicense(testString,PublicDomain::pData)) return;
+				_licenseURL = _getStringFromTrueTypeFont(fontName);
 				
 			}
 		}
 		
+		//
+		// Get here if not a known license string:
+		//
+		
+	}else if(FT_IS_SCALABLE(_face)){
+		
+		///////////////////////////////
+		//
+		// Could be Type 1, Type 42, 
+		// CID, or PFR CASES:
+		//
+		///////////////////////////////
+		
+		PS_FontInfoRec fi;
+		FT_Get_PS_Font_Info(_face,&fi);
+		
+		if(fi.notice){
+			licenseString = fi.notice;
+			_checkAllKnownLicenses(licenseString);
+			_storeCopyrightSummary(licenseString);
+		}
+		
 	}
 	
-	return;
+	
+}
+
+//
+// _storeCopyrightSummary
+//
+void FontFace::_storeCopyrightSummary(const std::string &copyrightString){
+	if(copyrightString.length()){
+		UTF8String utf8(copyrightString);
+		_copyright = (std::string) utf8.unicodeSubStringOnWordBoundary(1,COPYRIGHT_SUMMARY_STRING_LENGTH);
+		if(utf8.length() >COPYRIGHT_SUMMARY_STRING_LENGTH){
+			_copyright += " ...";
+		}
+	}
+}
+
+//
+// _checkAllKnownLicenses
+//
+bool FontFace::_checkAllKnownLicenses( const std::string &licenseString){
+	
+	//
+	// First check for the most common Open/Libre font licenses:
+	//
+	if( _checkLicense(licenseString,OpenFontLicense::pData)) return true;
+	//
+	// For GPL, we need to distinguish the "GPL with Font Exception" sub category:
+	//
+	if( _checkLicense(licenseString,GPL::pData)){
+		if( _checkLicense(licenseString,GPLWithFontException::pData)) return true;
+		if( _checkLicense(licenseString,LGPL::pData)) return true;
+	}
+	
+	//
+	// Historical licenses for fonts from specific vendors / projects / organisations:
+	//
+	if( _checkLicense(licenseString,BitstreamVeraLicense::pData)) return true;
+	if( _checkLicense(licenseString,ArphicPublicLicense::pData)) return true;
+	if( _checkLicense(licenseString,MagentaOpenLicense::pData)) return true;
+	if( _checkLicense(licenseString,AladdinFreePublicLicense::pData)) return true;
+	if( _checkLicense(licenseString,IPALicense::pData)) return true;
+	if( _checkLicense(licenseString,UtopiaLicense::pData)) return true;
+	if( _checkLicense(licenseString,STIXLicense::pData)) return true;
+	if( _checkLicense(licenseString,MITLicense::pData)) return true;
+	if( _checkLicense(licenseString,MPLUSLicense::pData)) return true;
+	if( _checkLicense(licenseString,GUSTLicense::pData)) return true;
+	if( _checkLicense(licenseString,XFree86License::pData)) return true;
+	
+	//
+	// Licenses which --subject to debate-- aren't really true 
+	// licenses at all:
+	//
+	if( _checkLicense(licenseString,Freeware::pData)) return true;
+	if( _checkLicense(licenseString,PublicDomain::pData)) return true;
+	
+	return false;
 	
 }
 
 //
 // _checkLicense
 //
-bool FontFace::_checkLicense( std::string &teststr, const LicenseData *pData){
+bool FontFace::_checkLicense( const std::string &teststr, const LicenseData *pData){
 	
 	for(const char **key=pData->searchKeys;*key;key++){
 		if(strcasestr(teststr.c_str(),*key)){
@@ -849,7 +923,10 @@ void FontFace::fillReport(MLR *mlr){
 	 mlr->addKeyValuePair("fixedSizes", _hasFixedSizes ? "yes":"no" );
 	 mlr->addKeyValuePair("copyright" , _copyright );
 	 mlr->addKeyValuePair("license"   , _licenseData->name);
-	if(_licenseData->url[0]){
+	 
+	 if(_licenseURL.length()){
+		mlr->addKeyValuePair("licenseUrl",_licenseURL);
+	}else if(_licenseData->url[0]){
 		mlr->addKeyValuePair("licenseUrl",_licenseData->url);
 	}
 	 
