@@ -123,3 +123,13 @@
 #include "Osmanya.h"
 #include "Tifinagh.h"
 #include "Vai.h"
+#include "Ethiopic.h"
+
+// 2009.08.27.ET ADDITIONS:
+#include "TaiLe.h"
+#include "NewTaiLue.h"
+#include "PhagsPa.h"
+#include "Mongolian.h"
+
+//#include "CJKA.h"
+

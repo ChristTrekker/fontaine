@@ -451,6 +451,13 @@ void FontFace::_checkOrthographies(void){
 		_checkOrthography(ZhuYinFuHao::pData);
 		
 		//
+		// Extension A and B:
+		//
+		//_checkOrthography(CJKExtensionA::pData);
+		//_checkOrthography(CJKExtensionB::pData);
+		//
+		
+		//
 		// Japanese: Spot check using kana and Kokuji spots:
 		//
 		// => Using 0x3059 "SU" for Kana spot
@@ -468,6 +475,7 @@ void FontFace::_checkOrthographies(void){
 	//
 	// Korean:
 	//
+	_checkOrthography(Hangul::pData);
 	
 	
 	//
@@ -488,7 +496,6 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Runic::pData);
 	_checkOrthography(Khmer::pData);
 	_checkOrthography(Yi::pData);
-	_checkOrthography(Hangul::pData);
 	
 	//
 	// Symbols -- Divide Unicode blocks
@@ -524,6 +531,14 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Osmanya::pData);
 	_checkOrthography(Tifinagh::pData);
 	_checkOrthography(Vai::pData);
+	_checkOrthography(Ethiopic::pData);
+	
+	// 2009.08.27.ET Additions:
+	_checkOrthography(TaiLe::pData);
+	_checkOrthography(NewTaiLue::pData);
+	_checkOrthography(PhagsPa::pData);
+	_checkOrthography(Mongolian::pData);
+	
 	
 }
 
