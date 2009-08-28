@@ -130,6 +130,9 @@
 #include "NewTaiLue.h"
 #include "PhagsPa.h"
 #include "Mongolian.h"
+// 2009.08.28.ET ADDITIONS:
+#include "Venda.h"
+#include "IgboOnwu.h"
 
 //#include "CJKA.h"
 

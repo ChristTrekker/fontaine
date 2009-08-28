@@ -406,6 +406,8 @@ void FontFace::_checkOrthographies(void){
 		_checkOrthography(IPA::pData);
 		_checkOrthography(LatinLigatures::pData);
 		_checkOrthography(ClaudianLetters::pData);
+		_checkOrthography(Venda::pData);
+		_checkOrthography(IgboOnwu::pData);
 	}
 	
 	// GREEK:
