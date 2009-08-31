@@ -34,6 +34,7 @@
 #include <stdarg.h>
 #include "BufferSizes.h"
 #include <string>
+#include <stdio.h>
 
 // Loader class:
 class MessageInitializer;
