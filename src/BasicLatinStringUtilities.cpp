@@ -71,6 +71,26 @@ std::string & toUpperCase(std::string &s){
 	
 }
 
+//
+// escapeASCIIDoubleQuote : changes "He said, "Hello!"" into "He said, \"Hello!\""
+//
+std::string & escapeASCIIDoubleQuote(std::string &s){
+	
+	std::string::iterator it(s.begin());
+	
+	for(;it != s.end();it++){
+		
+		if( *it == '"' ){
+			
+			it = s.insert(it,(unsigned char) 0x005C);
+			it++;
+			
+		}
+	}
+	
+	return s;
+	
+}
 
 
 

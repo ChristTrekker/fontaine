@@ -10,6 +10,9 @@
 
 #include "JSONR.h"
 
+// Needed for BasicLatin::EscapeASCIIDoubleQuote() function:
+#include "BasicLatinStringUtilities.h" 
+
 //
 // Constructor:
 //
@@ -82,7 +85,9 @@ void JSONR::addKeyValuePair(const std::string &key,const std::string &value){
 	_incrementChildren();
 	_indent();
 	
-	_ss << "\"" << key << "\":\"" << value << "\"" ;
+	std::string v(value);
+	BasicLatin::escapeASCIIDoubleQuote(v);
+	_ss << "\"" << key << "\":\"" << v << "\"" ;
 	
 }
 
