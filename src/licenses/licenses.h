@@ -2,6 +2,7 @@
 // The Fontaine Font Analysis Project 
 // 
 // Copyright (c) 2009 by Edward H. Trager
+// Copyright (c) 2010 by Dave Crossland
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -20,6 +21,9 @@
 #include "GPL.h"
 #include "GPLWithFontException.h"
 #include "LGPL.h"
+#include "CC-BY-SA.h"
+#include "CC-BY.h"
+#include "CC-ZERO.h"
 
 // Common for X11 Fonts:
 #include "MIT.h"

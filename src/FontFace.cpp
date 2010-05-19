@@ -2,6 +2,7 @@
 // The Fontaine Font Analysis Project 
 // 
 // Copyright (c) 2009 by Edward H. Trager
+// Copyright (c) 2010 by Dave Crossland
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -692,6 +693,14 @@ bool FontFace::_checkAllKnownLicenses( const std::string &licenseString){
 	// First check for the most common Open/Libre font licenses:
 	//
 	if( _checkLicense(licenseString,OpenFontLicense::pData)) return true;
+	
+	//
+	// CC licenses have to be ordered so CC-BY doesn't return for CC-BY-SA
+	//
+	if( _checkLicense(licenseString,CC_BY_SA::pData)) return true;
+	if( _checkLicense(licenseString,CC_BY::pData)) return true;
+	if( _checkLicense(licenseString,CC_ZERO::pData)) return true;
+
 	//
 	// For GPL, we need to distinguish the "GPL with Font Exception" sub category:
 	//
