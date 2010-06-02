@@ -2,6 +2,7 @@
 // The Fontaine Font Analysis Project 
 // 
 // Copyright (c) 2009 by Edward H. Trager
+// Copyright (c) 2010 by Nicolas Spalinger 
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -24,8 +25,10 @@ namespace OpenFontLicense{
 //
 // Sample sentences
 // 
-const char *fullNames[]={
+const char *searchKeys[]={
 	"Open Font License",
+	"OFL",
+	"scripts.sil.org/OFL",
 	END_OF_LICENSE_NAMES
 };
 
@@ -36,7 +39,7 @@ const char *fullNames[]={
 LicenseData data={
 	"OFL", // acronym
 	"http://scripts.sil.org/OFL", // url
-	fullNames // One or more full name descriptions used for matching
+	searchKeys // One or more full name descriptions used for matching
 };
 
 const LicenseData *pData = &data;

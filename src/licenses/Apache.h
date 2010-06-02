@@ -10,26 +10,23 @@
 
 
 //
-// STIX.h
+// Apache.h
 //
 
 #ifndef LICENSE_DATA
 #include "LicenseData.h"
 #endif
 
-#ifndef STIX_LICENSE
-#define STIX_LICENSE
+#ifndef APACHE
+#define APACHE
 
-namespace STIXLicense{
+namespace ApacheLicense{
 
 //
 // Sample sentences
 // 
-// The metadata is quite similar to the new fonts released under OFL, but the small differences in date and definition allow us
-// to distinguish the beta under the project-specific license and the 1.0 version under OFL
 const char *searchKeys[]={
-	"2007 by the STI Pub Companies",
-	"the derivative work will carry a different name",
+	"Apache License",
 	END_OF_LICENSE_NAMES
 };
 
@@ -38,8 +35,8 @@ const char *searchKeys[]={
 // LicenseData
 //
 LicenseData data={
-	"STIX Font License (deprecated: the new version of the fonts have been released under the OFL)", // name
-	"http://www.aip.org/stixfonts/news.html", // url
+	"Apache 2.0", // name
+	"http://www.apache.org/licenses/LICENSE-2.0", // url
 	searchKeys // One or more full name descriptions used for matching
 };
 

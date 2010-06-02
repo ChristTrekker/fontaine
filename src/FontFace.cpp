@@ -3,6 +3,7 @@
 // 
 // Copyright (c) 2009 by Edward H. Trager
 // Copyright (c) 2010 by Dave Crossland
+// Copyright (c) 2010 by Nicolas Spalinger
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -690,7 +691,7 @@ void FontFace::_storeCopyrightSummary(const std::string &copyrightString){
 bool FontFace::_checkAllKnownLicenses( const std::string &licenseString){
 	
 	//
-	// First check for the most common Open/Libre font licenses:
+	// First check for the most common libre/open font licenses:
 	//
 	if( _checkLicense(licenseString,OpenFontLicense::pData)) return true;
 	
@@ -710,7 +711,8 @@ bool FontFace::_checkAllKnownLicenses( const std::string &licenseString){
 	}
 	
 	//
-	// Historical licenses for fonts from specific vendors / projects / organisations:
+	// Historical licenses for fonts from specific vendors / projects / 
+	// organisations which should be deprecated and discouraged:
 	//
 	if( _checkLicense(licenseString,BitstreamVeraLicense::pData)) return true;
 	if( _checkLicense(licenseString,ArphicPublicLicense::pData)) return true;
@@ -718,18 +720,28 @@ bool FontFace::_checkAllKnownLicenses( const std::string &licenseString){
 	if( _checkLicense(licenseString,AladdinFreePublicLicense::pData)) return true;
 	if( _checkLicense(licenseString,IPALicense::pData)) return true;
 	if( _checkLicense(licenseString,UtopiaLicense::pData)) return true;
-	if( _checkLicense(licenseString,STIXLicense::pData)) return true;
 	if( _checkLicense(licenseString,MITLicense::pData)) return true;
 	if( _checkLicense(licenseString,MPLUSLicense::pData)) return true;
 	if( _checkLicense(licenseString,GUSTLicense::pData)) return true;
 	if( _checkLicense(licenseString,XFree86License::pData)) return true;
+	if( _checkLicense(licenseString,ApacheLicense::pData)) return true;
 	
 	//
+	// Restricted licenses which have been made obsolete by 
+	// their authors and replaced by libre licenses
+	//
+	if( _checkLicense(licenseString,STIXLicense::pData)) return true;
+
+	//
 	// Licenses which --subject to debate-- aren't really true 
-	// licenses at all:
+	// licenses at all and are not designed for font software 
+	// and cause problems:
 	//
 	if( _checkLicense(licenseString,Freeware::pData)) return true;
 	if( _checkLicense(licenseString,PublicDomain::pData)) return true;
+	if( _checkLicense(licenseString,CC_ZERO::pData)) return true;
+	if( _checkLicense(licenseString,CC_BY::pData)) return true;
+	if( _checkLicense(licenseString,CC_BY_SA::pData)) return true;
 	
 	return false;
 	
