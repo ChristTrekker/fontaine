@@ -133,6 +133,8 @@
 // 2009.08.28.ET ADDITIONS:
 #include "Venda.h"
 #include "IgboOnwu.h"
+// 2010.06.03.ET ADDITIONS:
+#include "TaiTham.h"
 
 //#include "CJKA.h"
 

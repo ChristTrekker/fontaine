@@ -542,6 +542,7 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(NewTaiLue::pData);
 	_checkOrthography(PhagsPa::pData);
 	_checkOrthography(Mongolian::pData);
+	_checkOrthography(TaiTham::pData);
 	
 	
 }
