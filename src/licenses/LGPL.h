@@ -25,6 +25,7 @@ namespace LGPL{
 // Sample sentences
 // 
 const char *searchKeys[]={
+	"LGPL"
 	"GNU Lesser General Public License",
 	"Lesser General Public License",
 	END_OF_LICENSE_NAMES

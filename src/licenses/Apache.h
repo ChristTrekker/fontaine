@@ -26,7 +26,9 @@ namespace ApacheLicense{
 // Sample sentences
 // 
 const char *searchKeys[]={
+	"Apache",
 	"Apache License",
+	"Apache 2 License",
 	END_OF_LICENSE_NAMES
 };
 

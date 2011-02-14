@@ -29,6 +29,8 @@ const char *searchKeys[]={
 	"Open Font License",
 	"OFL",
 	"scripts.sil.org/OFL",
+	"openfont",
+	"open font",
 	END_OF_LICENSE_NAMES
 };
 
@@ -37,7 +39,7 @@ const char *searchKeys[]={
 // LicenseData
 //
 LicenseData data={
-	"OFL", // acronym
+	"OFL (SIL Open Font License)", // acronym
 	"http://scripts.sil.org/OFL", // url
 	searchKeys // One or more full name descriptions used for matching
 };

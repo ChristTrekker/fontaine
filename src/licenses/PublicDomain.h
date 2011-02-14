@@ -34,7 +34,7 @@ const char *fullNames[]={
 // LicenseData
 //
 LicenseData data={
-	"Public Domain", // acronym
+	"Public Domain (not a license)", // acronym
 	"", // url
 	fullNames // One or more full name descriptions used for matching
 };

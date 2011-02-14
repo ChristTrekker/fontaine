@@ -25,7 +25,9 @@ namespace BitstreamVeraLicense{
 // Sample sentences
 // 
 const char *searchKeys[]={
-	"Bitstream Vera",
+	"Bitstream",
+	"Vera",
+	"DejaVu",
 	END_OF_LICENSE_NAMES
 };
 
@@ -34,7 +36,7 @@ const char *searchKeys[]={
 // LicenseData
 //
 LicenseData data={
-	"Bitstream Vera License", // name
+	"Bitstream Vera License (and derivative projects)", // name
 	"http://www.gnome.org/fonts/", // url
 	searchKeys // descriptions used for matching
 };

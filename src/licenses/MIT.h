@@ -25,7 +25,7 @@ namespace MITLicense{
 // Sample sentences
 // 
 const char *searchKeys[]={
-	" MIT ", "X11",
+	"MIT", "X11",
 	END_OF_LICENSE_NAMES
 };
 
@@ -35,7 +35,7 @@ const char *searchKeys[]={
 //
 LicenseData data={
 	"MIT (X11) License", // name
-	"http://opensource.org/mit.php", // url
+	"http://www.opensource.org/licenses/mit-license.php", // url
 	searchKeys // One or more full name descriptions used for matching
 };
 
