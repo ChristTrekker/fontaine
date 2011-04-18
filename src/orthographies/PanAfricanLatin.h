@@ -280,6 +280,16 @@ UINT32 values[]={
 	0x1EE5, // ụ
 	0x1EF2, // Ỳ
 	0x1EF3, // ỳ
+	// 2011.04.18.ET Addenda based on Denis Jacquerye <moyogo@gmail.com>
+	// email of 2010.12.01
+	0x019F, // Ɵ
+	0x0275, // ɵ
+	0xA78D, // Ɥ
+	0x0265, // ɥ
+	0xA78B, // Ꞌ
+	0xA78C, // ꞌ
+	0x0166, // Ŧ
+	0x0167, // ŧ
 	END_OF_DATA
 };
 
