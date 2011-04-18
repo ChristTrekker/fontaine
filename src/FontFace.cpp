@@ -80,6 +80,21 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 					case NID_FONT_SUBFAM:
 						if(_subFamily.empty()) _subFamily   = _getPlatform3Encoding1String(fontName.string_len,fontName.string);
 						break;
+					case NID_VERSION:
+						if(_version.empty()) _version       = _getPlatform3Encoding1String(fontName.string_len,fontName.string);
+						break;
+					case NID_VENDOR:
+						if(_vendor.empty()) _vendor         = _getPlatform3Encoding1String(fontName.string_len,fontName.string);
+						break;
+					case NID_DESIGNER:
+						if(_designer.empty()) _designer     = _getPlatform3Encoding1String(fontName.string_len,fontName.string);
+						break;
+					case NID_URL_VENDOR:
+						if(_vendorURL.empty()) _vendorURL   = _getPlatform3Encoding1String(fontName.string_len,fontName.string);
+						break;
+					case NID_URL_DESIGNER:
+						if(_designerURL.empty()) _designerURL = _getPlatform3Encoding1String(fontName.string_len,fontName.string);
+						break;
 					default:
 						break;
 					}
@@ -106,11 +121,10 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 				//	// DEBUG:
 				//	std::cout << ">>> COPYRIGHT: " << _getPlatform3Encoding1String(fontName.string_len,fontName.string) << std::endl;
 				//}
-				//if(fontName.name_id==NID_LICENSE){
+				//if(fontName.name_id==NID_VERSION){
 				//	// DEBUG:
-				//	std::cout << ">>> LICENSE: " << _getPlatform3Encoding1String(fontName.string_len,fontName.string) << std::endl;
+				//	std::cout << ">>> VERSION     : " << _getPlatform3Encoding1String(fontName.string_len,fontName.string) << std::endl;
 				//}
-				
 				
 			}else if(fontName.platform_id==1 && fontName.encoding_id==0){
 				//
@@ -127,6 +141,21 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 					break;
 				case NID_FONT_SUBFAM:
 					if(_subFamily.empty()) _subFamily   = _getPlatform1Encoding0String(fontName.string_len,fontName.string);
+					break;
+				case NID_VERSION:
+					if(_version.empty()) _version       = _getPlatform1Encoding0String(fontName.string_len,fontName.string);
+					break;
+				case NID_VENDOR:
+					if(_vendor.empty()) _vendor         = _getPlatform1Encoding0String(fontName.string_len,fontName.string);
+					break;
+				case NID_DESIGNER:
+					if(_designer.empty()) _designer     = _getPlatform1Encoding0String(fontName.string_len,fontName.string);
+					break;
+				case NID_URL_VENDOR:
+					if(_vendorURL.empty()) _vendorURL   = _getPlatform1Encoding0String(fontName.string_len,fontName.string);
+					break;
+				case NID_URL_DESIGNER:
+					if(_designerURL.empty()) _designerURL = _getPlatform1Encoding0String(fontName.string_len,fontName.string);
 					break;
 				default:
 					break;
@@ -962,13 +991,28 @@ void FontFace::fillReport(MLR *mlr){
 	 mlr->addKeyValuePair("fixedSizes", _hasFixedSizes ? "yes":"no" );
 	 mlr->addKeyValuePair("copyright" , _copyright );
 	 mlr->addKeyValuePair("license"   , _licenseData->name);
-	 
+	
+	//
+	// If the font provides a URL for the license, then we use that.
+	// However when the font does not provide a license URL but Fontaine
+	// has detected what the license is, then we provide the license URL
+	// given in Fontaine's license database:
+	//
 	 if(_licenseURL.length()){
 		mlr->addKeyValuePair("licenseUrl",_licenseURL);
-	}else if(_licenseData->url[0]){
+	 }else if(_licenseData->url[0]){
 		mlr->addKeyValuePair("licenseUrl",_licenseData->url);
-	}
-	 
+	 }
+	
+	//
+	// 2011.04.18.ET Addenda: version, vendor, and designer information:
+	//
+	 mlr->addKeyValuePair("version"     , _version    );
+	 mlr->addKeyValuePair("vendor"      , _vendor     );
+	 mlr->addKeyValuePair("vendorUrl"   , _vendorURL  );
+	 mlr->addKeyValuePair("designer"    , _designer   );
+	 mlr->addKeyValuePair("designerUrl" , _designerURL);
+	
 	 s1 << std::dec << _glyphCount;
 	 mlr->addKeyValuePair("glyphCount",s1.str());
 	 

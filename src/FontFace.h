@@ -104,6 +104,13 @@ private:
 	
 	std::string _licenseURL; // 2009.07.16.ET addendum
 	
+	// 2011.04.18.ET addenda:
+	std::string _version;
+	std::string _vendor;
+	std::string _designer;
+	std::string _vendorURL;
+	std::string _designerURL;
+	
 	unsigned _glyphCount;    // Number of glyphs
 	
 	FAMILY  _genericFamily;
