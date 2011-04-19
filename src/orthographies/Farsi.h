@@ -30,10 +30,9 @@ UINT32 values[]={
 	0x0698, // JEH
 	0x06a9, // KEHEH
 	0x06af, // GAF
-	0x06c0, // HEH WITH YEH ABOVE
 	0x06cc, // FARSI YEH
 	START_RANGE_PAIR,
-	0x06f0,0x06f9,
+	0x06f0,0x06f9, // Farsi numerals ۰-۹
 	END_OF_DATA
 };
 
