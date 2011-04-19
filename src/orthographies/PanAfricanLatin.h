@@ -1,7 +1,7 @@
 //
 // The Fontaine Font Analysis Project 
 // 
-// Copyright (c) 2009 by Edward H. Trager
+// Copyright (c) 2009,2011 by Edward H. Trager
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -22,8 +22,8 @@
 namespace PanAfricanLatin{
 
 //
-// Unicode values 
-//
+// Unicode values beyond Basic Latin:
+// 
 UINT32 values[]={
 	0x00D8, // Ø
 	0x00F8, // ø
@@ -254,7 +254,7 @@ UINT32 values[]={
 	0x1E85, // ẅ
 	0x1E92, // Ẓ
 	0x1E93, // ẓ
-	0x1EA1, // ạ
+	0x1EA0, // Ạ
 	0x1EA1, // ạ
 	0x1EAC, // Ậ
 	0x1EAD, // ậ
@@ -290,6 +290,49 @@ UINT32 values[]={
 	0xA78C, // ꞌ
 	0x0166, // Ŧ
 	0x0167, // ŧ
+	//
+	// 2011.04.19.ET Additional code points from Anloc's 
+	// charlist.txt of 2010.12.01:
+	// 
+	0x00D5, // Õ
+	0x00D9, // Ù
+	0x00DA, // Ú
+	0x00DB, // Û
+	0x00DD, // Ý
+	0x00F5, // õ
+	0x00F9, // ù
+	0x00FA, // ú
+	0x00FB, // û
+	0x00FD, // ý
+	0x011A, // Ě
+	0x011B, // ě
+	0x011C, // Ĝ
+	0x011D, // ĝ
+	0x0120, // Ġ
+	0x0121, // ġ
+	0x012A, // Ī
+	0x012B, // ī
+	0x0131, // ı
+	0x0143, // Ń
+	0x0144, // ń
+	0x0176, // Ŷ
+	0x0177, // ŷ
+	0x017D, // Ž
+	0x017E, // ž
+	0x01D3, // Ǔ
+	0x01D4, // ǔ
+	0x01F8, // Ǹ
+	0x01F9, // ǹ
+	0x024D, // ɍ
+	0x0267, // ɧ
+	0x02BF, // ʿ
+	0x02D7, // ˗
+	0x02EE, // ˮ
+	0x1E5A, // Ṛ
+	0x1E5B, // ṛ
+	0xA789, // ꞉
+	0xA78A, // ꞊
+	0x0245, // Ʌ	
 	END_OF_DATA
 };
 
