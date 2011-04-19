@@ -573,6 +573,8 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Mongolian::pData);
 	_checkOrthography(TaiTham::pData);
 	
+	// 2011.04.19.ET Addendum:
+	_checkOrthography(Glagolitic::pData);
 	
 }
 

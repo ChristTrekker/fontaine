@@ -3,6 +3,8 @@
 //
 // 2008.12.31.ET
 // 
+// Last update: 2011.04.19.ET
+// 
 
 ///////////////////////
 //
@@ -71,9 +73,10 @@
 #include "Coptic.h"
 
 //
-// Cyrillic:
+// Cyrillic and related:
 //
 #include "BasicCyrillic.h"
+#include "Glagolitic.h"
 
 //
 // The Rest:
