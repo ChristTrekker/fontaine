@@ -76,7 +76,6 @@
 // Cyrillic and related:
 //
 #include "BasicCyrillic.h"
-#include "Glagolitic.h"
 
 //
 // The Rest:
@@ -138,6 +137,10 @@
 #include "IgboOnwu.h"
 // 2010.06.03.ET ADDITIONS:
 #include "TaiTham.h"
+
+// 2011.04.19.ET ADDENDA:
+#include "Glagolitic.h"
+#include "Gothic.h"
 
 //#include "CJKA.h"
 
