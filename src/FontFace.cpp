@@ -576,6 +576,7 @@ void FontFace::_checkOrthographies(void){
 	// 2011.04.19.ET Addenda:
 	_checkOrthography(Glagolitic::pData);
 	_checkOrthography(Gothic::pData);
+	_checkOrthography(Bamum::pData);
 	
 }
 

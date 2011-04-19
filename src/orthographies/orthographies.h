@@ -141,6 +141,7 @@
 // 2011.04.19.ET ADDENDA:
 #include "Glagolitic.h"
 #include "Gothic.h"
+#include "Bamum.h"
 
 //#include "CJKA.h"
 
