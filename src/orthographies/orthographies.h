@@ -64,6 +64,12 @@
 #include "ZhuYinFuHao.h"        // Zhuyin phonetics (bopomofo)
 
 //
+// Korean subsets:
+//
+#include "Jamo.h" // Includes BOTH Jamo and Compatability Jamo blocks
+#include "Hangul.h"
+
+//
 // Greek:
 //
 #include "BasicGreek.h"
@@ -97,7 +103,6 @@
 #include "MathematicalOperators.h"
 #include "ChessSymbols.h"
 #include "Yi.h"
-#include "Hangul.h"
 
 //
 // Indic:
