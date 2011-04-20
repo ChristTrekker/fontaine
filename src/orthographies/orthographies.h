@@ -138,10 +138,11 @@
 // 2010.06.03.ET ADDITIONS:
 #include "TaiTham.h"
 
-// 2011.04.19.ET ADDENDA:
+// 2011.04.19,20.ET ADDENDA:
 #include "Glagolitic.h"
 #include "Gothic.h"
 #include "Bamum.h"
+#include "Brahmi.h"
 
 //#include "CJKA.h"
 

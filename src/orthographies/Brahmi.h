@@ -8,24 +8,30 @@
 //
 
 //
-// .h
+// Brahmi.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef 
-#define 
+#ifndef BRAHMI
+#define BRAHMI
 
-namespace {
+namespace Brahmi{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
+	// Various signs, independent vowels,
+	// consonants, dependent vowels, virama,
+	// and punctuation marks:
 	START_RANGE_PAIR,
-	0x,0x,
+	0x11000,0x1104D,
+	// Numbers and digits:
+	START_RANGE_PAIR,
+	0x11052,0x1106F,
 	END_OF_DATA
 };
 
@@ -33,7 +39,7 @@ UINT32 values[]={
 // Sample sentences
 // 
 const char *sentences[]={
-	"",
+	"𑀩𑀼𑀤𑀥𑀁 𑀲𑀭𑀡𑀁 𑀕𑀘𑀙𑀫𑀺",
 	END_OF_DATA
 };
 
@@ -42,11 +48,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"", // Common name
+	"Brāhmī", // Common name
 	"", // Native name
-	0x, // key
+	0x11005, // key
 	values,
-	"", // Sample characters
+	"𑀩𑀼𑀤𑀥𑀁 𑀲𑀭𑀡𑀁 𑀕𑀘𑀙𑀫𑀺", // Sample characters
 	sentences
 };
 

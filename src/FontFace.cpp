@@ -573,10 +573,11 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Mongolian::pData);
 	_checkOrthography(TaiTham::pData);
 	
-	// 2011.04.19.ET Addenda:
+	// 2011.04.19,20.ET Addenda:
 	_checkOrthography(Glagolitic::pData);
 	_checkOrthography(Gothic::pData);
 	_checkOrthography(Bamum::pData);
+	_checkOrthography(Brahmi::pData);
 	
 }
 
