@@ -580,6 +580,14 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Bamum::pData);
 	_checkOrthography(Brahmi::pData);
 	
+	_checkOrthography(Batak::pData);
+	_checkOrthography(Balinese::pData);
+	_checkOrthography(Buginese::pData);
+	_checkOrthography(Cham::pData);
+	_checkOrthography(Javanese::pData);
+	_checkOrthography(KayahLi::pData);
+	
+	
 }
 
 //

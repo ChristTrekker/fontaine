@@ -149,5 +149,12 @@
 #include "Bamum.h"
 #include "Brahmi.h"
 
+#include "Batak.h"
+#include "Balinese.h"
+#include "Buginese.h"
+#include "Cham.h"
+#include "Javanese.h"
+#include "KayahLi.h"
+
 //#include "CJKA.h"
 
