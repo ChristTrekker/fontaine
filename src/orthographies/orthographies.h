@@ -156,5 +156,11 @@
 #include "Javanese.h"
 #include "KayahLi.h"
 
+#include "Rejang.h"
+#include "Sundanese.h"
+#include "TaiViet.h"
+
+#include "OldSouthArabian.h"
+
 //#include "CJKA.h"
 

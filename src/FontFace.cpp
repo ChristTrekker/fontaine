@@ -587,6 +587,12 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Javanese::pData);
 	_checkOrthography(KayahLi::pData);
 	
+	_checkOrthography(Rejang::pData);
+	_checkOrthography(Sundanese::pData);
+	_checkOrthography(TaiViet::pData);
+	
+	_checkOrthography(OldSouthArabian::pData);
+	
 	
 }
 
