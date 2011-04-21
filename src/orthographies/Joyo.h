@@ -1992,7 +1992,7 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"Joyo",
+	"Japanese Joyo",
 	"日本常用漢字",
 	0x4ed9, // 
 	values,

@@ -48,7 +48,7 @@ const char *sentences[]={
 OrthographyData data={
 	"Korean Jamo", // Common name
 	"자모", // Native name
-	0x1100, // key
+	0x3131, // key
 	values,
 	"ㄱㄲㄳㄴㄵㄶㄷㄸㄹㄺ", // Sample characters
 	sentences

@@ -68,6 +68,7 @@
 //
 #include "Jamo.h" // Includes BOTH Jamo and Compatability Jamo blocks
 #include "Hangul.h"
+#include "SouthKoreanHanja.h" // list of 1800 Hanja taught in South Korean schools
 
 //
 // Greek:

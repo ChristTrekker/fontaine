@@ -508,9 +508,9 @@ void FontFace::_checkOrthographies(void){
 	//
 	// Korean:
 	//
-	if(_checkOrthography(Jamo::pData)){
-		_checkOrthography(Hangul::pData);
-	}
+	_checkOrthography(Jamo::pData);
+	_checkOrthography(Hangul::pData);
+	_checkOrthography(SouthKoreanHanja::pData);
 	
 	//
 	// The Rest:

@@ -45,7 +45,7 @@ const char *sentences[]={
 OrthographyData data={
 	"Korean Hangul", // Common name
 	"한글 / 조선글", // Native name
-	0xAC6F, // key
+	0xAC00, // key
 	values,
 	"", // Sample characters
 	sentences

@@ -47,7 +47,7 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"Kana",
+	"Japanese Kana",
 	"仮名",
 	0x3042, // HIRAGANA LETTER A
 	values,
