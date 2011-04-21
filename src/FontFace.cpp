@@ -552,6 +552,15 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Gujarati::pData);
 	_checkOrthography(Gurmukhi::pData);
 	_checkOrthography(Oriya::pData);
+	_checkOrthography(Kaithi::pData);
+	_checkOrthography(Kharoshthi::pData);
+	_checkOrthography(Lepcha::pData);
+	_checkOrthography(Limbu::pData);
+	_checkOrthography(MeeteiMayak::pData);
+	_checkOrthography(OlChiki::pData);
+	_checkOrthography(Saurashtra::pData);
+	_checkOrthography(SylotiNagri::pData);
+	_checkOrthography(VedicExtensions::pData);
 	
 	//
 	// Philippine scripts

@@ -117,6 +117,16 @@
 #include "Gujarati.h"
 #include "Gurmukhi.h"
 #include "Oriya.h"
+// 2011.04.21.ET INDIC ADDITIONS:
+#include "Kaithi.h"
+#include "Kharoshthi.h"
+#include "Lepcha.h"
+#include "Limbu.h"
+#include "MeeteiMayak.h"
+#include "OlChiki.h"
+#include "Saurashtra.h"
+#include "SylotiNagri.h"
+#include "VedicExtensions.h"
 
 //
 // Philippine Scripts:
