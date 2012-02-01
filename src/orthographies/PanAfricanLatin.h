@@ -333,6 +333,10 @@ UINT32 values[]={
 	0xA789, // ꞉
 	0xA78A, // ꞊
 	0x0245, // Ʌ	
+	//
+	// 2011.02.01.ET addendum based on email from Daniel Johnson:
+	//
+	0xA7AA, // Ɦ H with hook
 	END_OF_DATA
 };
 
