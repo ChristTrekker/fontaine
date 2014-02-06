@@ -629,9 +629,9 @@ std::string FontFace::getOrthographyReport(void) const{
 	for(p=_supportedOrthographies.begin();p!=_supportedOrthographies.end();p++){
 		
 		OrthographyResults::SUPPORTLEVEL supportLevel = (*p)->getSupportLevel();
-		if( supportLevel==OrthographyResults::FRAGMENTARY && _reportFragmentary ||
-		    supportLevel==OrthographyResults::PARTIAL     && _reportPartial     ||
-		    supportLevel==OrthographyResults::FULL        && _reportFull
+		if( (supportLevel==OrthographyResults::FRAGMENTARY && _reportFragmentary) ||
+		    (supportLevel==OrthographyResults::PARTIAL     && _reportPartial    ) ||
+		    (supportLevel==OrthographyResults::FULL        && _reportFull       )
 		){
 			
 			ss << (*p)->getReport( _reportMissing );
@@ -1059,9 +1059,9 @@ void FontFace::fillReport(MLR *mlr){
 	for(p=_supportedOrthographies.begin();p!=_supportedOrthographies.end();p++){
 		
 		OrthographyResults::SUPPORTLEVEL supportLevel = (*p)->getSupportLevel();
-		if( supportLevel==OrthographyResults::FRAGMENTARY && _reportFragmentary ||
-		    supportLevel==OrthographyResults::PARTIAL     && _reportPartial     ||
-		    supportLevel==OrthographyResults::FULL        && _reportFull
+		if( (supportLevel==OrthographyResults::FRAGMENTARY && _reportFragmentary) ||
+		    (supportLevel==OrthographyResults::PARTIAL     && _reportPartial    ) ||
+		    (supportLevel==OrthographyResults::FULL        && _reportFull       )
 		){
 			
 			mlr->start("orthography");
