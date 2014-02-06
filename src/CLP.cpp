@@ -176,13 +176,13 @@ void CLP::_processMysqlArguments(std::string argument){
 //
 // CONSTRUCTOR
 //
-CLP::CLP(std::string name="",std::string version="",std::string copyright="",std::string url="",std::string usage=""){
+CLP::CLP(std::string name,std::string version,std::string copyright,std::string url,std::string usagestring){
 	
 	_name      = name;
 	_version   = version;
 	_copyright = copyright;
 	_url       = url;
-	_usage     = usage;
+	_usage     = usagestring;
 	
 }
 

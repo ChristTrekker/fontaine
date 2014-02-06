@@ -63,8 +63,8 @@ void XHTMLR::addKeyValuePair(const std::string &key,const std::string &value){
 	
 	std::string humanReadableKey = key;
 	BasicLatin::segmentize(humanReadableKey);
-	
-	_ss << "<" << _keyValuePairTag << " class=\"" << key << "\">" << humanReadableKey << ": " << value << "</" << _keyValuePairTag << ">" << std::endl;
+
+	_ss << "<" << _keyValuePairTag << " class=\"" << key << "\">" << "<span class=\"key\">" << humanReadableKey << "</span>: <span class=\"val\">" << value << "</span></" << _keyValuePairTag << ">" << std::endl;
 	
 }
 

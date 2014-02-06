@@ -3,7 +3,7 @@
 //
 // 2008.12.31.ET
 // 
-// Last update: 2011.04.20.ET
+// Last update: 2014.02.06.ET
 // 
 
 ///////////////////////
@@ -62,6 +62,7 @@
 #include "TraditionalChinese.h" // Top 3500 traditional
 #include "HKSCS.h"              // Hong Kong supplementary plane set
 #include "ZhuYinFuHao.h"        // Zhuyin phonetics (bopomofo)
+//#include "CJKA.h"
 
 //
 // Korean subsets:
@@ -173,5 +174,9 @@
 
 #include "OldSouthArabian.h"
 
-//#include "CJKA.h"
-
+//////////////////////
+//
+// Emoticons
+//
+//////////////////////
+#include "Emoticons.h"
