@@ -8,24 +8,24 @@
 //
 
 //
-// .h
+// LinearBIdeograms.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef 
-#define 
+#ifndef LINEAR_B_IDEOGRAMS
+#define LINEAR_B_IDEOGRAMS
 
-namespace {
+namespace LinearBIdeograms{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x,0x,
+	0x10080,0x100FA,
 	END_OF_DATA
 };
 
@@ -42,11 +42,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"", // Common name
-	"", // Native name
-	0x, // key
+	"Linear B Ideograms", // Common name
+	"Linear B Ideograms", // Native name
+	0x10080, // key
 	values,
-	"", // Sample characters
+	"𐂀𐂁𐂂𐂃𐂄𐂅", // Sample characters
 	sentences
 };
 

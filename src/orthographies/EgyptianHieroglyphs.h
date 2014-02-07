@@ -8,24 +8,24 @@
 //
 
 //
-// .h
+// EgyptianHieroglyphs.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef 
-#define 
+#ifndef EGYTIAN_HIEROGLYPHS
+#define EGYTIAN_HIEROGLYPHS
 
-namespace {
+namespace EgyptianHieroglyphs{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x,0x,
+	0x13000,0x1342E,
 	END_OF_DATA
 };
 
@@ -42,11 +42,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"", // Common name
-	"", // Native name
-	0x, // key
+	"Egyptian Hieroglyphs", // Common name
+	"Egyptian Hieroglyphs", // Native name
+	0x13000, // key
 	values,
-	"", // Sample characters
+	"𓀀𓃜𓁾𓆫𓆧𓎸", // Sample characters
 	sentences
 };
 

@@ -8,24 +8,31 @@
 //
 
 //
-// .h
+// CypriotSyllabary.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef 
-#define 
+#ifndef CYPRIOT_SYLLABARY
+#define CYPRIOT_SYLLABARY
 
-namespace {
+namespace CypriotSyllabary {
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x,0x,
+	0x10800,0x10805,
+	0X10808,
+	START_RANGE_PAIR,
+	0x1080A,0x10835,
+	0x10837,
+	0x10838,
+	0x1083C,
+	0x1083F,
 	END_OF_DATA
 };
 
@@ -42,11 +49,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"", // Common name
-	"", // Native name
-	0x, // key
+	"Cypriot Syllabary", // Common name
+	"Cypriot Syllabary", // Native name
+	0x10800, // key
 	values,
-	"", // Sample characters
+	"𐠂𐠁𐠀𐠃𐠄𐠅", // Sample characters
 	sentences
 };
 

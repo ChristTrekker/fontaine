@@ -39,7 +39,7 @@ int main(int argc, const char *argv[]){
 	//
 	// Command line processor:
 	//
-	CLP clp("Fontaine","1.0 alpha",L("Copyright ⓒ 2009 by Edward H. Trager. All Rights Reserved. Released under GPL v. 2 or later."),"http://www.unifont.org","fontaine [option]... [font file]...\n");
+	CLP clp("Fontaine","1.01",L("Copyright ⓒ 2014 by Edward H. Trager. All Rights Reserved. Released under GPL v. 2 or later."),"http://www.unifont.org","fontaine [option]... [font file]...\n");
 	
 	//
 	// Set up command line switches:

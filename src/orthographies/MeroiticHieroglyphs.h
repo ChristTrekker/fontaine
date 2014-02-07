@@ -8,24 +8,24 @@
 //
 
 //
-// .h
+// MeroiticHieroglyphs.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef 
-#define 
+#ifndef MEROITIC_HIEROGLYPHS
+#define MEROITIC_HIEROGLYPHS
 
-namespace {
+namespace MeroiticHieroglyphs{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x,0x,
+	0x10980,0x1099F,
 	END_OF_DATA
 };
 
@@ -42,11 +42,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"", // Common name
-	"", // Native name
-	0x, // key
+	"Meroitic Hieroglyphs", // Common name
+	"Meroitic Hieroglyphs", // Native name
+	0x10980, // key
 	values,
-	"", // Sample characters
+	"𐦀𐦁𐦂𐦃𐦄𐦅", // Sample characters
 	sentences
 };
 

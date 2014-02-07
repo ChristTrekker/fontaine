@@ -8,24 +8,26 @@
 //
 
 //
-// .h
+// MeroiticCursive.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef 
-#define 
+#ifndef MEROITIC_CURSIVE
+#define MEROITIC_CURSIVE
 
-namespace {
+namespace MeroiticCursive{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x,0x,
+	0x109A0,0x109B7,
+	0x109BE,
+	0x109BF,
 	END_OF_DATA
 };
 
@@ -42,11 +44,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"", // Common name
-	"", // Native name
-	0x, // key
+	"MeroiticCursive", // Common name
+	"MeroiticCursive", // Native name
+	0x109A0, // key
 	values,
-	"", // Sample characters
+	"𐦠𐦡𐦢𐦣𐦤𐦥", // Sample characters
 	sentences
 };
 

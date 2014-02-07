@@ -538,6 +538,7 @@ void FontFace::_checkOrthographies(void){
 	//
 	_checkOrthography(MathematicalOperators::pData);
 	_checkOrthography(ChessSymbols::pData);
+	_checkOrthography(Emoticons::pData);
 	
 	//
 	// Indic:
@@ -599,9 +600,19 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Rejang::pData);
 	_checkOrthography(Sundanese::pData);
 	_checkOrthography(TaiViet::pData);
-	
+
+	//////////////////////
+	//
+	// Historic:
+	//
+	//////////////////////	
 	_checkOrthography(OldSouthArabian::pData);
-	
+	_checkOrthography(LinearBIdeograms::pData);
+	_checkOrthography(LinearBSyllabary::pData);
+	_checkOrthography(CypriotSyllabary::pData);
+	_checkOrthography(MeroiticHieroglyphs::pData);
+	_checkOrthography(MeroiticCursive::pData);
+	_checkOrthography(EgyptianHieroglyphs::pData);
 	
 }
 

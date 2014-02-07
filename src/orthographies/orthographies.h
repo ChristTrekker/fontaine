@@ -180,3 +180,16 @@
 //
 //////////////////////
 #include "Emoticons.h"
+
+////////////////////////
+//
+// 2014.02.07 Additions
+//
+////////////////////////
+#include "CypriotSyllabary.h"
+#include "LinearBSyllabary.h"
+#include "LinearBIdeograms.h"
+#include "MeroiticHieroglyphs.h"
+#include "MeroiticCursive.h"
+#include "EgyptianHieroglyphs.h"
+
