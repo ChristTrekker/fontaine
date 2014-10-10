@@ -116,7 +116,7 @@ std::string Message::get(void) const{
 std::string L(const char *format,...){
 	
 	char _message[GENERAL_STRING_BUFFER_SIZE];
-	bool _truncated;
+	bool _truncated = false;
 	
 	int n;
 	va_list args;
