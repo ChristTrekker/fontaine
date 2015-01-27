@@ -1,195 +1,126 @@
 //
 // orthographies.h
 //
-// 2008.12.31.ET
-// 
-// Last update: 2014.02.06.ET
-// 
-
-///////////////////////
+// This file is part of the FONTAINE project
+// (c) 2009, 2015 by Edward H. Trager
 //
-// Latin Orthographies
+// Last update: 2015.01.23.ET
 //
-///////////////////////
-
-#include "BasicLatin.h"
-#include "WesternEuropean.h"
-#include "Euro.h"
-#include "Catalan.h"
-#include "Baltic.h"
-#include "Turkish.h"
-#include "CentralEuropean.h"
-#include "Romanian.h"
-#include "Vietnamese.h"
-#include "Dutch.h"
-#include "Afrikaans.h"
-#include "Pinyin.h"
-#include "IPA.h"
-#include "LatinLigatures.h"
-#include "ClaudianLetters.h"
-#include "PanAfricanLatin.h"
-
-//////////////////////
+// NOTA BENE: The includes are now sorted in strictly alphabetic order
+//            When adding new orthographies, you can append a comment 
+//            to indicate a category (e.g., "Latin", "Chinese", etc. )
 //
-// NON LATIN
+//#include "CJKA.h"                      // Category=Chinese CJK Extension A
+//#include "ExtendedArabic.h"            // Category=Arabic
 //
-//////////////////////
-
 //
-// Arabic subsets:
-//
-#include "Arabic.h"
-#include "Farsi.h"
-#include "Urdu.h"
-#include "Kazakh.h"
-#include "Pashto.h"
-#include "Sindhi.h"
-#include "Uighur.h"
-//#include "ExtendedArabic.h"
-
-//
-// Japanese subsets:
-//
-#include "Kana.h"      // Hiragana and Katakana sets
-#include "Kokuji.h"    // National characters
-#include "Joyo.h"      // Standard education set
-#include "Jinmeiyo.h"  // Person and place name set
-
-//
-// Chinese subsets
-//
-#include "SimplifiedChinese.h"  // Top 3500 simplified
-#include "TraditionalChinese.h" // Top 3500 traditional
-#include "HKSCS.h"              // Hong Kong supplementary plane set
-#include "ZhuYinFuHao.h"        // Zhuyin phonetics (bopomofo)
-//#include "CJKA.h"
-
-//
-// Korean subsets:
-//
-#include "Jamo.h" // Includes BOTH Jamo and Compatability Jamo blocks
-#include "Hangul.h"
-#include "SouthKoreanHanja.h" // list of 1800 Hanja taught in South Korean schools
-
-//
-// Greek:
-//
-#include "BasicGreek.h"
-#include "ArchaicGreekLetters.h"
-#include "PolytonicGreek.h"
-
-#include "Coptic.h"
-
-//
-// Cyrillic and related:
-//
-#include "BasicCyrillic.h"
-
-//
-// The Rest:
-//
+#include "Afrikaans.h"                 // Category=Latin
+#include "Arabic.h"                    // Category=Arabic
+#include "ArchaicGreekLetters.h"       // Category=Greek
 #include "Armenian.h"
-#include "Hebrew.h"
-#include "Syriac.h"
-#include "Thaana.h"
-#include "Thai.h"
-#include "Lao.h"
-#include "Tibetan.h"
-#include "Myanmar.h"
-#include "Georgian.h"
-#include "Cherokee.h"
+#include "Balinese.h"
+#include "Baltic.h"                    // Category=Latin
+#include "Bamum.h"
+#include "BasicCyrillic.h"             // Category=Cyrillic
+#include "BasicGreek.h"                // Category=Greek
+#include "BasicLatin.h"                // Category=Latin
+#include "Batak.h"
+#include "Bengali.h"                   // Category=Indic
+#include "Brahmi.h"
+#include "Buginese.h"
 #include "CanadianSyllabics.h"
-#include "Ogham.h"
-#include "Runic.h"
-#include "Khmer.h"
-#include "MathematicalOperators.h"
+#include "Catalan.h"                   // Category=Latin
+#include "CentralEuropean.h"           // Category=Latin
+#include "Cham.h"
+#include "Cherokee.h"
 #include "ChessSymbols.h"
-#include "Yi.h"
-
-//
-// Indic:
-//
-#include "Bengali.h"
-#include "Devanagari.h"
-#include "Kannada.h"
-#include "Tamil.h"
-#include "Sinhala.h"
-#include "Telugu.h"
-#include "Malayalam.h"
-#include "Gujarati.h"
-#include "Gurmukhi.h"
-#include "Oriya.h"
-// 2011.04.21.ET INDIC ADDITIONS:
-#include "Kaithi.h"
-#include "Kharoshthi.h"
-#include "Lepcha.h"
-#include "Limbu.h"
-#include "MeeteiMayak.h"
-#include "OlChiki.h"
-#include "Saurashtra.h"
-#include "SylotiNagri.h"
-#include "VedicExtensions.h"
-
-//
-// Philippine Scripts:
-//
-#include "Hanunoo.h"
-
-//
-// African scripts
-//
-#include "Nko.h"
-#include "Osmanya.h"
-#include "Tifinagh.h"
-#include "Vai.h"
+#include "ClaudianLetters.h"           // Category=Latin
+#include "Coptic.h"                    // Category=Greek
+#include "CypriotSyllabary.h"          // Category=Historic
+#include "Devanagari.h"                // Category=Indic
+#include "Dutch.h"                     // Category=Latin
+#include "EgyptianHieroglyphs.h"       // Category=Historic
+#include "Emoticons.h"
 #include "Ethiopic.h"
-
-// 2009.08.27.ET ADDITIONS:
-#include "TaiLe.h"
-#include "NewTaiLue.h"
-#include "PhagsPa.h"
-#include "Mongolian.h"
-// 2009.08.28.ET ADDITIONS:
-#include "Venda.h"
-#include "IgboOnwu.h"
-// 2010.06.03.ET ADDITIONS:
-#include "TaiTham.h"
-
-// 2011.04.19,20.ET ADDENDA:
+#include "Euro.h"                      // Category=Latin
+#include "Farsi.h"                     // Category=Arabic
+#include "Georgian.h"
 #include "Glagolitic.h"
 #include "Gothic.h"
-#include "Bamum.h"
-#include "Brahmi.h"
-
-#include "Batak.h"
-#include "Balinese.h"
-#include "Buginese.h"
-#include "Cham.h"
+#include "Gujarati.h"                  // Category=Indic
+#include "Gurmukhi.h"                  // Category=Indic
+#include "HKSCS.h"                     // Category=Chinese Hong Kong supplementary plane set
+#include "Hangul.h"                    // Category=Korean
+#include "Hanunoo.h"                   // Category=Philippine
+#include "Hebrew.h"
+#include "IPA.h"                       // Category=Latin
+#include "IgboOnwu.h"
+#include "Jamo.h"                      // Category=Korean Includes BOTH Jamo and Compatability Jamo blocks
 #include "Javanese.h"
+#include "Jinmeiyo.h"                  // Category=Japanese Person and place name set
+#include "Joyo.h"                      // Category=Japanese Standard education set
+#include "Kaithi.h"                    // Category=Indic
+#include "Kana.h"                      // Category=Japanese Hiragana and Katakana sets
+#include "Kannada.h"                   // Category=Indic
 #include "KayahLi.h"
-
-#include "Rejang.h"
-#include "Sundanese.h"
-#include "TaiViet.h"
-
+#include "Kazakh.h"                    // Category=Arabic
+#include "Kharoshthi.h"                // Category=Indic
+#include "Khmer.h"
+#include "Kokuji.h"                    // Category=Japanese National characters
+#include "Lao.h"
+#include "LatinLigatures.h"            // Category=Latin
+#include "Lepcha.h"                    // Category=Indic
+#include "Limbu.h"                     // Category=Indic
+#include "LinearBIdeograms.h"          // Category=Historic
+#include "LinearBSyllabary.h"          // Category=Historic
+#include "Malayalam.h"                 // Category=Indic
+#include "MathematicalOperators.h"
+#include "MeeteiMayak.h"               // Category=Indic
+#include "MeroiticCursive.h"           // Category=Historic
+#include "MeroiticHieroglyphs.h"       // Category=Historic
+#include "Mongolian.h"
+#include "Myanmar.h"
+#include "NewTaiLue.h"
+#include "Nko.h"
+#include "Ogham.h"
+#include "OlChiki.h"                   // Category=Indic
 #include "OldSouthArabian.h"
-
-//////////////////////
-//
-// Emoticons
-//
-//////////////////////
-#include "Emoticons.h"
-
-////////////////////////
-//
-// 2014.02.07 Additions
-//
-////////////////////////
-#include "CypriotSyllabary.h"
-#include "LinearBSyllabary.h"
-#include "LinearBIdeograms.h"
-#include "MeroiticHieroglyphs.h"
-#include "MeroiticCursive.h"
-#include "EgyptianHieroglyphs.h"
+#include "Oriya.h"                     // Category=Indic
+#include "Osmanya.h"
+#include "PanAfricanLatin.h"           // Category=Latin
+#include "Pashto.h"                    // Category=Arabic
+#include "PhagsPa.h"
+#include "Pinyin.h"                    // Category=Latin
+#include "PolytonicGreek.h"            // Category=Greek
+#include "Rejang.h"
+#include "Romanian.h"                  // Category=Latin
+#include "Runic.h"
+#include "Saurashtra.h"                // Category=Indic
+#include "SimplifiedChinese.h"         // Category=Chinese Top 3500 simplified
+#include "Sindhi.h"                    // Category=Arabic
+#include "Sinhala.h"                   // Category=Indic
+#include "SouthKoreanHanja.h"          // Category=Korean list of 1800 Hanja taught in South Korean schools
+#include "Sundanese.h"
+#include "SylotiNagri.h"               // Category=Indic
+#include "Syriac.h"
+#include "TaiLe.h"
+#include "TaiTham.h"
+#include "TaiViet.h"
+#include "Tamil.h"                     // Category=Indic
+#include "Telugu.h"                    // Category=Indic
+#include "Thaana.h"
+#include "Thai.h"
+#include "Tibetan.h"
+#include "Tifinagh.h"
+#include "TraditionalChinese.h"        // Category=Chinese Top 3500 traditional
+#include "Turkish.h"                   // Category=Latin
+#include "Uighur.h"                    // Category=Arabic
+#include "Urdu.h"                      // Category=Arabic
+#include "Vai.h"
+#include "VedicExtensions.h"           // Category=Indic
+#include "Venda.h"
+#include "Vietnamese.h"                // Category=Latin
+#include "WesternEuropean.h"           // Category=Latin
+#include "Yi.h"
+#include "ZhuYinFuHao.h"               // Category=Chinese Zhuyin phonetics (bopomofo)
 
