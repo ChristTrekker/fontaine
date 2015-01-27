@@ -71,13 +71,11 @@ SET( SOURCES
 # Where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked:
 # 
 SET(CMAKE_MODULE_PATH "${FONTAINE_SOURCE_DIR}/cmake/modules")
-
 #
 # Include UsePkgConfig.cmake
 #
 #INCLUDE( UsePkgConfig )
 
-INCLUDE( FindFreetype )
 
 SET(requiredLibs)
 SET(requiredCFlags)
@@ -86,12 +84,12 @@ SET(requiredCFlags)
 #SET(optionalCFlags)
 
 #
-# Freetype2 support:
+# Freetype2 support REQUIRED:
 #
-IF( FREETYPE_FOUND )
-	INCLUDE_DIRECTORIES(${FREETYPE_INCLUDE_DIR})
-	SET(requiredLibs ${requiredLibs} ${FREETYPE_LIBRARIES})
-ENDIF( FREETYPE_FOUND )
+INCLUDE( FindFreetype )
+MESSAGE(STATUS ">>>>>>>>> Freetype headers are in ${FREETYPE_INCLUDE_DIRS} <<<<<<<<<<")
+INCLUDE_DIRECTORIES(${FREETYPE_INCLUDE_DIRS})
+SET(requiredLibs ${requiredLibs} ${FREETYPE_LIBRARIES})
 
 #
 # LibIntl support:
@@ -128,7 +126,7 @@ ADD_EXECUTABLE(fontaine ${SOURCES} )
 # Link target:
 #
 TARGET_LINK_LIBRARIES(fontaine 
-	${requiredLibs} 
+	${requiredLibs}
 	stdc++
 )
 
