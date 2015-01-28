@@ -513,22 +513,23 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(SouthKoreanHanja::pData);
 	
 	//
-	// The Rest:
+	// The Rest: (In Latin alphabetic order for now ... )
 	//
 	_checkOrthography(Armenian::pData);
+	_checkOrthography(CanadianSyllabics::pData);
+	_checkOrthography(Cherokee::pData);
+	_checkOrthography(Currencies::pData);
+	_checkOrthography(Georgian::pData);
 	_checkOrthography(Hebrew::pData);
+	_checkOrthography(Khmer::pData);
+	_checkOrthography(Lao::pData);
+	_checkOrthography(Myanmar::pData);
+	_checkOrthography(Ogham::pData);
+	_checkOrthography(Runic::pData);
 	_checkOrthography(Syriac::pData);
 	_checkOrthography(Thaana::pData);
 	_checkOrthography(Thai::pData);
-	_checkOrthography(Lao::pData);
 	_checkOrthography(Tibetan::pData);
-	_checkOrthography(Myanmar::pData);
-	_checkOrthography(Georgian::pData);
-	_checkOrthography(Cherokee::pData);
-	_checkOrthography(CanadianSyllabics::pData);
-	_checkOrthography(Ogham::pData);
-	_checkOrthography(Runic::pData);
-	_checkOrthography(Khmer::pData);
 	_checkOrthography(Yi::pData);
 	
 	//

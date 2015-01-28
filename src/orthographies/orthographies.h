@@ -36,6 +36,7 @@
 #include "ChessSymbols.h"
 #include "ClaudianLetters.h"           // Category=Latin
 #include "Coptic.h"                    // Category=Greek
+#include "Currencies.h"
 #include "CypriotSyllabary.h"          // Category=Historic
 #include "Devanagari.h"                // Category=Indic
 #include "Dutch.h"                     // Category=Latin
