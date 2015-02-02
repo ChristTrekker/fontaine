@@ -515,10 +515,14 @@ void FontFace::_checkOrthographies(void){
 	//
 	// The Rest: (In Latin alphabetic order for now ... )
 	//
+	_checkOrthography(AleutCyrillic::pData);
+	_checkOrthography(AleutLatin::pData);
 	_checkOrthography(Armenian::pData);
+	_checkOrthography(Astronomy::pData);
 	_checkOrthography(CanadianSyllabics::pData);
 	_checkOrthography(Cherokee::pData);
 	_checkOrthography(Currencies::pData);
+	_checkOrthography(Food::pData);
 	_checkOrthography(Georgian::pData);
 	_checkOrthography(Hebrew::pData);
 	_checkOrthography(Khmer::pData);
@@ -537,6 +541,9 @@ void FontFace::_checkOrthographies(void){
 	// into meaningful groups such as "chess symbols"
 	// as necessary.
 	//
+	_checkOrthography(MathematicalGreek::pData);
+	_checkOrthography(MathematicalLatin::pData);
+	_checkOrthography(MathematicalNumerals::pData);
 	_checkOrthography(MathematicalOperators::pData);
 	_checkOrthography(ChessSymbols::pData);
 	_checkOrthography(Emoticons::pData);

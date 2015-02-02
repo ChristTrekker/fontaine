@@ -15,9 +15,12 @@
 //
 //
 #include "Afrikaans.h"                 // Category=Latin
+#include "AleutCyrillic.h"
+#include "AleutLatin.h"
 #include "Arabic.h"                    // Category=Arabic
 #include "ArchaicGreekLetters.h"       // Category=Greek
 #include "Armenian.h"
+#include "Astronomy.h"
 #include "Balinese.h"
 #include "Baltic.h"                    // Category=Latin
 #include "Bamum.h"
@@ -45,6 +48,7 @@
 #include "Ethiopic.h"
 #include "Euro.h"                      // Category=Latin
 #include "Farsi.h"                     // Category=Arabic
+#include "Food.h"
 #include "Georgian.h"
 #include "Glagolitic.h"
 #include "Gothic.h"
@@ -75,6 +79,9 @@
 #include "LinearBIdeograms.h"          // Category=Historic
 #include "LinearBSyllabary.h"          // Category=Historic
 #include "Malayalam.h"                 // Category=Indic
+#include "MathematicalGreek.h"
+#include "MathematicalLatin.h"
+#include "MathematicalNumerals.h"
 #include "MathematicalOperators.h"
 #include "MeeteiMayak.h"               // Category=Indic
 #include "MeroiticCursive.h"           // Category=Historic
