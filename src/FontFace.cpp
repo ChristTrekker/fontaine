@@ -515,12 +515,14 @@ void FontFace::_checkOrthographies(void){
 	//
 	// The Rest: (In Latin alphabetic order for now ... )
 	//
+	_checkOrthography(Ahom::pData);
 	_checkOrthography(AleutCyrillic::pData);
 	_checkOrthography(AleutLatin::pData);
 	_checkOrthography(Armenian::pData);
 	_checkOrthography(Astronomy::pData);
 	_checkOrthography(CanadianSyllabics::pData);
 	_checkOrthography(Carian::pData);
+	_checkOrthography(Chakma::pData);
 	_checkOrthography(Cherokee::pData);
 	_checkOrthography(Currencies::pData);
 	_checkOrthography(Food::pData);
@@ -528,6 +530,7 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Hebrew::pData);
 	_checkOrthography(Khmer::pData);
 	_checkOrthography(Lao::pData);
+	_checkOrthography(MendeKikakui::pData);
 	_checkOrthography(Miao::pData);
 	_checkOrthography(Myanmar::pData);
 	_checkOrthography(Ogham::pData);

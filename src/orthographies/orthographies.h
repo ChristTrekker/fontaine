@@ -15,6 +15,7 @@
 //
 //
 #include "Afrikaans.h"                 // Category=Latin
+#include "Ahom.h"
 #include "AleutCyrillic.h"
 #include "AleutLatin.h"
 #include "Arabic.h"                    // Category=Arabic
@@ -35,6 +36,7 @@
 #include "Carian.h"
 #include "Catalan.h"                   // Category=Latin
 #include "CentralEuropean.h"           // Category=Latin
+#include "Chakma.h"
 #include "Cham.h"
 #include "Cherokee.h"
 #include "ChessSymbols.h"
@@ -85,6 +87,7 @@
 #include "MathematicalNumerals.h"
 #include "MathematicalOperators.h"
 #include "MeeteiMayak.h"               // Category=Indic
+#include "MendeKikakui.h"
 #include "MeroiticCursive.h"           // Category=Historic
 #include "MeroiticHieroglyphs.h"       // Category=Historic
 #include "Miao.h"
