@@ -520,6 +520,7 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Armenian::pData);
 	_checkOrthography(Astronomy::pData);
 	_checkOrthography(CanadianSyllabics::pData);
+	_checkOrthography(Carian::pData);
 	_checkOrthography(Cherokee::pData);
 	_checkOrthography(Currencies::pData);
 	_checkOrthography(Food::pData);
@@ -527,8 +528,10 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Hebrew::pData);
 	_checkOrthography(Khmer::pData);
 	_checkOrthography(Lao::pData);
+	_checkOrthography(Miao::pData);
 	_checkOrthography(Myanmar::pData);
 	_checkOrthography(Ogham::pData);
+	_checkOrthography(Polynesian::pData);
 	_checkOrthography(Runic::pData);
 	_checkOrthography(Syriac::pData);
 	_checkOrthography(Thaana::pData);

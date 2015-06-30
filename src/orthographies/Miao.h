@@ -1,5 +1,5 @@
 //
-// Food.h
+// Miao.h
 //
 // Contributed by christtrekker
 // 2015.06.30
@@ -9,24 +9,21 @@
 #include "../OrthographyData.h"
 #endif
 
-#ifndef FOOD
-#define FOOD
+#ifndef MIAO
+#define MIAO
 
-namespace Food{
+namespace Miao{
 
 //
 // Unicode values
 //
 UINT32 values[]={
-	0x2615,
-	0x26FE,
 	START_RANGE_PAIR,
-	0x1F32D,0x1F32F,
+	0x16F00,0x16F44,
 	START_RANGE_PAIR,
-	0x1F33D,0x1F33F,
+	0x16F50,0x16F7E,
 	START_RANGE_PAIR,
-	0x1F344,0x1F37F,
-	0x1F9C0,
+	0x16F8F,0x16F9F,
 	END_OF_DATA
 };
 
@@ -43,9 +40,9 @@ const char *sentences[]={
 //
 //
 OrthographyData data={
-	"Food and Drink", // Common name
-	"Food and Drink", // Native name
-	0x2615, // key
+	"Miao", // Common name
+	"", // Native name
+	0x16F00, // key
 	values,
 	"",// Sample characters
 	sentences

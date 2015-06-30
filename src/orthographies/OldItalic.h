@@ -1,5 +1,5 @@
 //
-// Food.h
+// OldItalic.h
 //
 // Contributed by christtrekker
 // 2015.06.30
@@ -9,24 +9,17 @@
 #include "../OrthographyData.h"
 #endif
 
-#ifndef FOOD
-#define FOOD
+#ifndef OLD_ITALIC
+#define OLD_ITALIC
 
-namespace Food{
+namespace OldItalic{
 
 //
 // Unicode values
 //
 UINT32 values[]={
-	0x2615,
-	0x26FE,
 	START_RANGE_PAIR,
-	0x1F32D,0x1F32F,
-	START_RANGE_PAIR,
-	0x1F33D,0x1F33F,
-	START_RANGE_PAIR,
-	0x1F344,0x1F37F,
-	0x1F9C0,
+	0x10300,0x10323,
 	END_OF_DATA
 };
 
@@ -43,9 +36,9 @@ const char *sentences[]={
 //
 //
 OrthographyData data={
-	"Food and Drink", // Common name
-	"Food and Drink", // Native name
-	0x2615, // key
+	"Old Italic", // Common name
+	"", // Native name
+	0x10300, // key
 	values,
 	"",// Sample characters
 	sentences

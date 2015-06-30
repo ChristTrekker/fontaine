@@ -32,6 +32,7 @@
 #include "Brahmi.h"
 #include "Buginese.h"
 #include "CanadianSyllabics.h"
+#include "Carian.h"
 #include "Catalan.h"                   // Category=Latin
 #include "CentralEuropean.h"           // Category=Latin
 #include "Cham.h"
@@ -86,12 +87,14 @@
 #include "MeeteiMayak.h"               // Category=Indic
 #include "MeroiticCursive.h"           // Category=Historic
 #include "MeroiticHieroglyphs.h"       // Category=Historic
+#include "Miao.h"
 #include "Mongolian.h"
 #include "Myanmar.h"
 #include "NewTaiLue.h"
 #include "Nko.h"
 #include "Ogham.h"
 #include "OlChiki.h"                   // Category=Indic
+#include "OldItalic.h"
 #include "OldSouthArabian.h"
 #include "Oriya.h"                     // Category=Indic
 #include "Osmanya.h"
@@ -99,6 +102,7 @@
 #include "Pashto.h"                    // Category=Arabic
 #include "PhagsPa.h"
 #include "Pinyin.h"                    // Category=Latin
+#include "Polynesian.h"
 #include "PolytonicGreek.h"            // Category=Greek
 #include "Rejang.h"
 #include "Romanian.h"                  // Category=Latin
