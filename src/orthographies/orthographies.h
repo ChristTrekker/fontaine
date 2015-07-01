@@ -92,6 +92,7 @@
 #include "MeroiticHieroglyphs.h"       // Category=Historic
 #include "Miao.h"
 #include "Mongolian.h"
+#include "MUFI_3_0.h"
 #include "Myanmar.h"
 #include "NewTaiLue.h"
 #include "Nko.h"

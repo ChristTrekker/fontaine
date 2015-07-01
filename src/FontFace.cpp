@@ -532,6 +532,7 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Lao::pData);
 	_checkOrthography(MendeKikakui::pData);
 	_checkOrthography(Miao::pData);
+	_checkOrthography(MUFI::pData);
 	_checkOrthography(Myanmar::pData);
 	_checkOrthography(Ogham::pData);
 	_checkOrthography(Polynesian::pData);
