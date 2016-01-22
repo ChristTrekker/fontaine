@@ -1,7 +1,7 @@
 //
 // The Fontaine Font Analysis Project 
 // 
-// Copyright (c) 2009 by Edward H. Trager
+// Copyright (c) 2009, 2015 by Edward H. Trager
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -9,27 +9,35 @@
 
 
 //
-// Khmer.h
+// Currencies.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef KHMER
-#define KHMER
+#ifndef CURRENCIES_HISTORIC
+#define CURRENCIES_HISTORIC
 
-namespace Khmer{
+namespace CurrenciesOld{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
-	START_RANGE_PAIR,
-	0x1780,0x17da, // Letters, vowels, etc.
-	0x17dc,
-	START_RANGE_PAIR,
-	0x17E0,0x17E9, // Digits
+	0x20A0,
+	0x20A2,
+	0x20A3,
+	0x20A4,
+	0x20A5,
+	0x20A7,
+	0x20A8,
+	0x20AF,
+	0x20B0,
+	0x20B3,
+	0x20B6,
+	0x20B7,
+	0x20BB,
 	END_OF_DATA
 };
 
@@ -37,20 +45,20 @@ UINT32 values[]={
 // Sample sentences
 // 
 const char *sentences[]={
-	"ជំរាបសួរស្ដី",
+	"Unicode currency symbols ₠, ₢, ₣, ₤, ₥, ₧, ₳, ₶, ₷, and ₻ are not in use as of 2015.",
 	END_OF_DATA
 };
 
 
 //
-// 
+// data
 //
 OrthographyData data={
-	"Khmer", // Common name
-	"អក្សរខ្មែរ", // Native name
-	0x1780, // key
+	"Historic Currencies",
+	"Historic Currencies",
+	0x20A3,
 	values,
-	"កខគឃងចឆជ", // Sample characters
+	"",
 	sentences
 };
 

@@ -67,7 +67,7 @@ END_OF_DATA
 //
 OrthographyData data={
 "Polynesian",
-"",
+"ʻŌlelo Hawaiʻi / Māori / Gagana Sāmoa / Reo Tahiti",
 0x0100, // LATIN CAPITAL LETTER A WITH MACRON
 values,
 "AāeēiīOōuūhkLmnpwʻ",

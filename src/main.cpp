@@ -50,14 +50,18 @@ int main(int argc, const char *argv[]){
 	clp.addSwitch("--xhtml"           , "-H" , "Produce output report in XHTML format.");
 	clp.addSwitch("--fxhtml"          , "-Y" , "Produce output report in FANCY XHTML format.");
 	clp.addSwitch("--xml"             , "-X" , "Produce output report in XML format.");
+
 	clp.addSwitch("--show-missing"    , "-M" , "Report which Unicode values are missing from fragmentary and partially-supported orthographies. (default)");
-	clp.addSwitch("--show-fragmentary", "-R" , "Report orthographies for which the font provides only fragmentary support.");
-	clp.addSwitch("--show-partial"    , "-P" , "Report orthographies for which the font provides only partial support");
-	clp.addSwitch("--show-full"       , "-F" , "Report orthographies for which the font provides full support");
 	clp.addSwitch("--hide-missing"    , "-m" , "Don't report which Unicode values are missing from fragmentary and partially-supported orthographies.");
+	clp.addSwitch("--show-fragmentary", "-R" , "Report orthographies for which the font provides only fragmentary support.");
 	clp.addSwitch("--hide-fragmentary", "-r" , "Don't report orthographies for which the font provides only fragmentary support.");
+	clp.addSwitch("--show-partial"    , "-P" , "Report orthographies for which the font provides only partial support");
 	clp.addSwitch("--hide-partial"    , "-p" , "Don't report orthographies for which the font provides only partial support");
+	clp.addSwitch("--show-full"       , "-F" , "Report orthographies for which the font provides full support");
 	clp.addSwitch("--hide-full"       , "-f" , "Don't report orthographies for which the font provides full support");
+	clp.addSwitch("--show-conscript"  , "-C" , "Report fictional orthographies");
+	clp.addSwitch("--hide-conscript"  , "-c" , "Don't report fictional orthographies (default)");
+
 	clp.addSwitch("--version"         , "-v" , "Print version and exit");
 	clp.addSwitch("--help"            , "-h" , "Print help and exit");
 	
@@ -146,6 +150,10 @@ int main(int argc, const char *argv[]){
 			if      (clp.hasSwitchSet("--show-full")) myFace.setReportOnFull(true);
 			else if (clp.hasSwitchSet("--hide-full")) myFace.setReportOnFull(false);
 			
+			if      (clp.hasSwitchSet("--show-conscript")) myFace.setReportOnConscript(true);
+			else if (clp.hasSwitchSet("--hide-conscript")) myFace.setReportOnConscript(false);
+			
+			myFace.checkOrthographies();
 			//
 			// non-const method that calls methods 
 			// on mlr to prepare the report:

@@ -1,5 +1,5 @@
 //
-// Astronomy.h
+// Weather.h
 //
 // Contributed by christtrekker
 //
@@ -8,33 +8,29 @@
 #include "../OrthographyData.h"
 #endif
 
-#ifndef ASTRONOMY
-#define ASTRONOMY
+#ifndef WEATHER
+#define WEATHER
 
-namespace Astronomy{
+namespace Weather{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x2604,0x2606,
+	0x2600,0x2603,
+	0x2607,
+	0x2608,
+	0x2614,
+	0x263C,
 	START_RANGE_PAIR,
-	0x2609,0x260D,
+	0x26C4,0x26C8,
 	START_RANGE_PAIR,
-	0x263D,0x2644,
-	0x26E2,
+	0x2744,0x2746,
 	START_RANGE_PAIR,
-	0x2646,0x2653,
+	0x1F300,0x1F302,
 	START_RANGE_PAIR,
-	0x26B3,0x26B7,
-	0x26CE,
-	START_RANGE_PAIR,
-	0x2B50,0x2B52,
-	0x1F30C,
-	START_RANGE_PAIR,
-	0x1F311,0x1F320,
-	0x1F52D,
+	0x1F321,0x1F32C,
 	END_OF_DATA
 };
 
@@ -42,7 +38,7 @@ UINT32 values[]={
 // Sample sentences
 // 
 const char *sentences[]={
-	"The solar system is ☉☿♀♁♂♃♄⛢♆, with minor planets ⚳ and ♇ visible through a 🔭.",
+	"",
 	END_OF_DATA
 };
 
@@ -51,9 +47,9 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"Astronomy", // Common name
-	"Astronomy", // Native name
-	0x2605, // key
+	"Weather", // Common name
+	"Weather", // Native name
+	0x211E, // key
 	values,
 	"",// Sample characters
 	sentences

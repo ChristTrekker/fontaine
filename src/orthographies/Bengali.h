@@ -51,7 +51,9 @@ UINT32 values[]={
 	START_RANGE_PAIR,
 	0x09df,0x09e3,
 	START_RANGE_PAIR,
-	0x09e6,0x09fa,
+	0x09e6,0x09f1,
+	START_RANGE_PAIR,
+	0x09f4,0x09fa,
 	END_OF_DATA
 };
 

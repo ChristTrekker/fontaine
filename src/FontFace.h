@@ -148,6 +148,7 @@ private:
 	bool _reportFragmentary;
 	bool _reportPartial;
 	bool _reportFull;
+	bool _reportConscript;
 	
 public:
 	
@@ -179,11 +180,12 @@ public:
 	void setReportOnFragmentary(bool x);
 	void setReportOnPartial(bool x);
 	void setReportOnFull(bool x);
+	void setReportOnConscript(bool x);
+	void checkOrthographies(void);
 	
 private:
 	
 	bool _checkOrthography( const OrthographyData *pData );
-	void _checkOrthographies(void);
 	
 	bool _checkLicense( const std::string &test, const LicenseData *pData);
 	bool _checkAllKnownLicenses( const std::string &licenseString);

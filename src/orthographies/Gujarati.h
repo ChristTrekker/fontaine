@@ -105,8 +105,7 @@ UINT32 values[]={
 	0x0AED, // ( ૭ ) GUJARATI DIGIT SEVEN
 	0x0AEE, // ( ૮ ) GUJARATI DIGIT EIGHT
 	0x0AEF, // ( ૯ ) GUJARATI DIGIT NINE
-	// Gujarati - Currency sign
-	0x0AF1, // ( ૱ ) GUJARATI RUPEE SIGN	
+	0x0AF9, // ( ૹ ) GUJARATI LETTER ZHA
 	END_OF_DATA
 };
 

@@ -37,8 +37,20 @@ UINT32 values[]={
 	0x0BF9,
 	0x0E3F,
 	0x17DB,
+	0x20A1,
+	0x20A6,
 	START_RANGE_PAIR,
-	0x20A0,0x20BD,
+	0x20A9,0x20AE,
+	0x20B1,
+	0x20B2,
+	0x20B4,
+	0x20B5,
+	0x20B8,
+	0x20B9,
+	0x20BA,
+	0x20BC,
+	0x20BD,
+	0x20BE,
 	0xA838,
 	0xFDFC,
 	0xFE69,
@@ -54,7 +66,7 @@ UINT32 values[]={
 // Sample sentences
 // 
 const char *sentences[]={
-	"Unicode currency symbols include $,¢,£,¥,₧,€ and ₭.",
+	"Unicode currency symbols $, ¢, £, ¤, ¥, ֏, ؋, ฿, ₡, ₦, ₨, ₩, ₪, ₫, €, ₭, ₮, ₱, ₲, ₵, ₸,₹, ₺, ₼, ₽, ₾, and ﷼ are in use as of 2015.",
 	END_OF_DATA
 };
 
@@ -65,7 +77,7 @@ const char *sentences[]={
 OrthographyData data={
 	"Currencies",
 	"Currencies",
-	0x20A6, // Naira 
+	0x0024,
 	values,
 	"$¢£¥₧€₭",
 	sentences
