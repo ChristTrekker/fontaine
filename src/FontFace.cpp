@@ -422,23 +422,31 @@ void FontFace::_checkOrthographies(void){
 	// Latin:
 	//
 	if( _checkOrthography( BasicLatin::pData ) ){
+		// European large orthography groups:
 		_checkOrthography(WesternEuropean::pData);
-		_checkOrthography(Euro::pData);
-		_checkOrthography(Catalan::pData);
-		_checkOrthography(Baltic::pData);
-		_checkOrthography(Turkish::pData);
 		_checkOrthography(CentralEuropean::pData);
-		_checkOrthography(Romanian::pData);
-		_checkOrthography(Vietnamese::pData);
-		_checkOrthography(PanAfricanLatin::pData); 
+		// Euro symbol:
+		_checkOrthography(Euro::pData);
+		// Additional European, sorted alphabetically:
+		_checkOrthography(Baltic::pData);
+		_checkOrthography(Catalan::pData);
 		_checkOrthography(Dutch::pData);
+		_checkOrthography(Esperanto::pData);
+		_checkOrthography(Romanian::pData);
+		_checkOrthography(Turkish::pData);
+		// African continent:
+		_checkOrthography(PanAfricanLatin::pData); 
 		_checkOrthography(Afrikaans::pData);
+		_checkOrthography(IgboOnwu::pData);
+		_checkOrthography(Venda::pData);
+		// Asia:
+		_checkOrthography(Vietnamese::pData);
 		_checkOrthography(Pinyin::pData);
-		_checkOrthography(IPA::pData);
+		// Historical orthographies:
 		_checkOrthography(LatinLigatures::pData);
 		_checkOrthography(ClaudianLetters::pData);
-		_checkOrthography(Venda::pData);
-		_checkOrthography(IgboOnwu::pData);
+		// International Phonetic Alphabet:
+		_checkOrthography(IPA::pData);
 	}
 	
 	// GREEK:
@@ -474,7 +482,6 @@ void FontFace::_checkOrthographies(void){
 	// used in Korean newspapers:
 	//
 	if(hasUnicodeValue(0x4e2d)){
-	
 		//
 		// Chinese:
 		//

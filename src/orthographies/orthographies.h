@@ -48,6 +48,7 @@
 #include "Dutch.h"                     // Category=Latin
 #include "EgyptianHieroglyphs.h"       // Category=Historic
 #include "Emoticons.h"
+#include "Esperanto.h"
 #include "Ethiopic.h"
 #include "Euro.h"                      // Category=Latin
 #include "Farsi.h"                     // Category=Arabic
