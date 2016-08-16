@@ -11,6 +11,7 @@
 //
 // MathematicalNumerals.h
 //
+// Arabic numeral forms used in academia
 // contributed by christtrekker
 //
 
@@ -27,6 +28,19 @@ namespace MathematicalNumerals{
 // Unicode values 
 //
 UINT32 values[]={
+	START_RANGE_PAIR,
+	0x0030,0x0039,
+	// superscripts
+	0x2070,0x00B9,0x00B2,0x00B3,START_RANGE_PAIR,0x2074,0x2079,
+	//subscripts
+	START_RANGE_PAIR,
+	0x2080,0x2089,0x23E8,
+	// fractions
+	START_RANGE_PAIR,
+	0x00BC,0x00BE,
+	START_RANGE_PAIR,
+	0x2150,0x215F,
+	// typographic variants
 	START_RANGE_PAIR,
 	0x1D7CE,0x1D7FF,
 	END_OF_DATA

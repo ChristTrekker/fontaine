@@ -1,40 +1,38 @@
 //
-// Food.h
+// Medical.h
 //
 // Contributed by christtrekker
-// 2015.06.30
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef FOOD
-#define FOOD
+#ifndef MEDICAL
+#define MEDICAL
 
-namespace Food{
+namespace Medical{
 
 //
-// Unicode values
+// Unicode values 
 //
 UINT32 values[]={
-	0x2615,
-	0x26FE,
+	0x211E,
+	0x2623,
+	0x2695,
+	0x271A,
 	START_RANGE_PAIR,
-	0x1F32D,0x1F32F,
-	START_RANGE_PAIR,
-	0x1F33D,0x1F33F,
-	START_RANGE_PAIR,
-	0x1F344,0x1F37F,
-	START_RANGE_PAIR,
-	0x1F950,0x1F95E,
-	0x1F9C0,
+	0x23BE,0x23CC, // Dentistry
+	0x1F3E5,
+	0x1F489,
+	0x1F48A,
+	0x1F54F,
 	END_OF_DATA
 };
 
 //
 // Sample sentences
-//
+// 
 const char *sentences[]={
 	"",
 	END_OF_DATA
@@ -42,12 +40,12 @@ const char *sentences[]={
 
 
 //
-//
+// 
 //
 OrthographyData data={
-	"Food and Drink", // Common name
-	"Food and Drink", // Native name
-	0x2615, // key
+	"Medical symbols", // Common name
+	"Medical symbols", // Native name
+	0x211E, // key
 	values,
 	"",// Sample characters
 	sentences
