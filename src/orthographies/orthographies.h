@@ -39,6 +39,7 @@
 #include "Cham.h"
 #include "Cherokee.h"
 #include "ChessSymbols.h"
+#include "Cirth.h"                     // Category=ConScript
 #include "ClaudianLetters.h"           // Category=Latin
 #include "Coptic.h"                    // Category=Greek
 #include "Currencies.h"
@@ -77,6 +78,7 @@
 #include "Kazakh.h"                    // Category=Arabic
 #include "Kharoshthi.h"                // Category=Indic
 #include "Khmer.h"
+#include "Klingon.h"                   // Category=ConScript
 #include "Kokuji.h"                    // Category=Japanese National characters
 #include "Lao.h"
 #include "LatinLigatures.h"            // Category=Latin

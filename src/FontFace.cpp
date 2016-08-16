@@ -40,6 +40,8 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 	_reportFragmentary = true;
 	_reportPartial     = true;
 	_reportFull        = true;
+
+	_reportConscript   = false;
 	
 	FT_Error err;
 	
@@ -196,7 +198,7 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 	//
 	// Check orthographic coverage:
 	//
-	_checkOrthographies();
+	//_checkOrthographies();
 	
 	//
 	// Check license:
@@ -415,9 +417,9 @@ bool FontFace::_checkOrthography( const OrthographyData *pData ){
 }
 
 //
-// _checkOrthographies
+// checkOrthographies
 //
-void FontFace::_checkOrthographies(void){
+void FontFace::checkOrthographies(void){
 	
 	//
 	// Latin:
@@ -644,6 +646,13 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(OldSouthArabian::pData);
 	_checkOrthography(Runic::pData);
 	
+	/////
+	// ConScripts from CSUR
+	/////
+	if(_reportConscript) {
+		_checkOrthography(Cirth::pData);
+		_checkOrthography(Klingon::pData);
+	}
 }
 
 //
@@ -888,6 +897,13 @@ void FontFace::setReportOnPartial(bool x){
 //
 void FontFace::setReportOnFull(bool x){
 	_reportFull = x;
+}
+
+//
+// setReportOnConscript
+//
+void FontFace::setReportOnConscript(bool x){
+	_reportConscript = x;
 }
 
 //
