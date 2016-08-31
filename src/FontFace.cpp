@@ -40,6 +40,8 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 	_reportFragmentary = true;
 	_reportPartial     = true;
 	_reportFull        = true;
+
+	_reportConscript   = false;
 	
 	FT_Error err;
 	
@@ -196,7 +198,7 @@ FontFace::FontFace( FontLibrary &library, const std::string &fileName ){
 	//
 	// Check orthographic coverage:
 	//
-	_checkOrthographies();
+	//_checkOrthographies();
 	
 	//
 	// Check license:
@@ -340,8 +342,9 @@ bool FontFace::_checkOrthography( const OrthographyData *pData ){
 	//
 	// Spot check using "key" value first
 	// to avoid wasting time:
+	// No: Computers so fast now, why risk false positive?
 	//
-	if(!hasUnicodeValue(pData->key)) return false;
+	//if(!hasUnicodeValue(pData->key)) return false;
 	
 	//
 	// Check all values in the orthography:
@@ -414,9 +417,9 @@ bool FontFace::_checkOrthography( const OrthographyData *pData ){
 }
 
 //
-// _checkOrthographies
+// checkOrthographies
 //
-void FontFace::_checkOrthographies(void){
+void FontFace::checkOrthographies(void){
 	
 	//
 	// Latin:
@@ -439,9 +442,13 @@ void FontFace::_checkOrthographies(void){
 		_checkOrthography(Afrikaans::pData);
 		_checkOrthography(IgboOnwu::pData);
 		_checkOrthography(Venda::pData);
+		// America:
+		_checkOrthography(EskaleutLatin::pData);
 		// Asia:
-		_checkOrthography(Vietnamese::pData);
 		_checkOrthography(Pinyin::pData);
+		_checkOrthography(Vietnamese::pData);
+		// Oceania:
+		_checkOrthography(Polynesian::pData);
 		// Historical orthographies:
 		_checkOrthography(LatinLigatures::pData);
 		_checkOrthography(ClaudianLetters::pData);
@@ -460,6 +467,7 @@ void FontFace::_checkOrthographies(void){
 	
 	// CYRILLIC:
 	_checkOrthography(BasicCyrillic::pData);
+	_checkOrthography(EskaleutCyrillic::pData);
 	
 	//
 	// Arabic:
@@ -518,49 +526,6 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Jamo::pData);
 	_checkOrthography(Hangul::pData);
 	_checkOrthography(SouthKoreanHanja::pData);
-	
-	//
-	// The Rest: (In Latin alphabetic order for now ... )
-	//
-	_checkOrthography(Ahom::pData);
-	_checkOrthography(AleutCyrillic::pData);
-	_checkOrthography(AleutLatin::pData);
-	_checkOrthography(Armenian::pData);
-	_checkOrthography(Astronomy::pData);
-	_checkOrthography(CanadianSyllabics::pData);
-	_checkOrthography(Carian::pData);
-	_checkOrthography(Chakma::pData);
-	_checkOrthography(Cherokee::pData);
-	_checkOrthography(Currencies::pData);
-	_checkOrthography(Food::pData);
-	_checkOrthography(Georgian::pData);
-	_checkOrthography(Hebrew::pData);
-	_checkOrthography(Khmer::pData);
-	_checkOrthography(Lao::pData);
-	_checkOrthography(MendeKikakui::pData);
-	_checkOrthography(Miao::pData);
-	_checkOrthography(MUFI::pData);
-	_checkOrthography(Myanmar::pData);
-	_checkOrthography(Ogham::pData);
-	_checkOrthography(Polynesian::pData);
-	_checkOrthography(Runic::pData);
-	_checkOrthography(Syriac::pData);
-	_checkOrthography(Thaana::pData);
-	_checkOrthography(Thai::pData);
-	_checkOrthography(Tibetan::pData);
-	_checkOrthography(Yi::pData);
-	
-	//
-	// Symbols -- Divide Unicode blocks
-	// into meaningful groups such as "chess symbols"
-	// as necessary.
-	//
-	_checkOrthography(MathematicalGreek::pData);
-	_checkOrthography(MathematicalLatin::pData);
-	_checkOrthography(MathematicalNumerals::pData);
-	_checkOrthography(MathematicalOperators::pData);
-	_checkOrthography(ChessSymbols::pData);
-	_checkOrthography(Emoticons::pData);
 	
 	//
 	// Indic:
@@ -623,19 +588,71 @@ void FontFace::_checkOrthographies(void){
 	_checkOrthography(Sundanese::pData);
 	_checkOrthography(TaiViet::pData);
 
+	//
+	// The Rest: (In Latin alphabetic order for now ... )
+	//
+	_checkOrthography(Ahom::pData);
+	_checkOrthography(Armenian::pData);
+	_checkOrthography(Braille6::pData);
+	_checkOrthography(CanadianSyllabics::pData);
+	_checkOrthography(Carian::pData);
+	_checkOrthography(Chakma::pData);
+	_checkOrthography(Cherokee::pData);
+	_checkOrthography(Georgian::pData);
+	_checkOrthography(Hebrew::pData);
+	_checkOrthography(Khmer::pData);
+	_checkOrthography(Lao::pData);
+	_checkOrthography(MendeKikakui::pData);
+	_checkOrthography(Miao::pData);
+	_checkOrthography(MUFI::pData);
+	_checkOrthography(Myanmar::pData);
+	_checkOrthography(Ogham::pData);
+	_checkOrthography(Syriac::pData);
+	_checkOrthography(Thaana::pData);
+	_checkOrthography(Thai::pData);
+	_checkOrthography(Tibetan::pData);
+	_checkOrthography(Yi::pData);
+	
+	//
+	// Symbols -- Divide Unicode blocks
+	// into meaningful groups such as "chess symbols"
+	// as necessary.
+	//
+	_checkOrthography(Astronomy::pData);
+	_checkOrthography(ChessSymbols::pData);
+	_checkOrthography(Currencies::pData);
+	_checkOrthography(CurrenciesOld::pData);
+	_checkOrthography(Emoticons::pData);
+	_checkOrthography(Food::pData);
+	_checkOrthography(MathematicalGreek::pData);
+	_checkOrthography(MathematicalLatin::pData);
+	_checkOrthography(MathematicalNumerals::pData);
+	_checkOrthography(MathematicalOperators::pData);
+	_checkOrthography(Medical::pData);
+	_checkOrthography(Religion::pData);
+	_checkOrthography(Weather::pData);
+	
 	//////////////////////
 	//
 	// Historic:
 	//
 	//////////////////////	
-	_checkOrthography(OldSouthArabian::pData);
+	_checkOrthography(CypriotSyllabary::pData);
+	_checkOrthography(EgyptianHieroglyphs::pData);
 	_checkOrthography(LinearBIdeograms::pData);
 	_checkOrthography(LinearBSyllabary::pData);
-	_checkOrthography(CypriotSyllabary::pData);
-	_checkOrthography(MeroiticHieroglyphs::pData);
 	_checkOrthography(MeroiticCursive::pData);
-	_checkOrthography(EgyptianHieroglyphs::pData);
+	_checkOrthography(MeroiticHieroglyphs::pData);
+	_checkOrthography(OldSouthArabian::pData);
+	_checkOrthography(Runic::pData);
 	
+	/////
+	// ConScripts from CSUR
+	/////
+	if(_reportConscript) {
+		_checkOrthography(Cirth::pData);
+		_checkOrthography(Klingon::pData);
+	}
 }
 
 //
@@ -880,6 +897,13 @@ void FontFace::setReportOnPartial(bool x){
 //
 void FontFace::setReportOnFull(bool x){
 	_reportFull = x;
+}
+
+//
+// setReportOnConscript
+//
+void FontFace::setReportOnConscript(bool x){
+	_reportConscript = x;
 }
 
 //

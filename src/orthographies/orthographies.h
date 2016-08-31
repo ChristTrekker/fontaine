@@ -16,8 +16,6 @@
 //
 #include "Afrikaans.h"                 // Category=Latin
 #include "Ahom.h"
-#include "AleutCyrillic.h"
-#include "AleutLatin.h"
 #include "Arabic.h"                    // Category=Arabic
 #include "ArchaicGreekLetters.h"       // Category=Greek
 #include "Armenian.h"
@@ -31,6 +29,7 @@
 #include "Batak.h"
 #include "Bengali.h"                   // Category=Indic
 #include "Brahmi.h"
+#include "Braille.h"
 #include "Buginese.h"
 #include "CanadianSyllabics.h"
 #include "Carian.h"
@@ -40,15 +39,19 @@
 #include "Cham.h"
 #include "Cherokee.h"
 #include "ChessSymbols.h"
+#include "Cirth.h"                     // Category=ConScript
 #include "ClaudianLetters.h"           // Category=Latin
 #include "Coptic.h"                    // Category=Greek
 #include "Currencies.h"
+#include "CurrenciesOld.h"
 #include "CypriotSyllabary.h"          // Category=Historic
 #include "Devanagari.h"                // Category=Indic
 #include "Dutch.h"                     // Category=Latin
 #include "EgyptianHieroglyphs.h"       // Category=Historic
 #include "Emoticons.h"
-#include "Esperanto.h"
+#include "EskaleutCyrillic.h"          // Category=Cyrillic
+#include "EskaleutLatin.h"             // Category=Latin
+#include "Esperanto.h"                 // Category=Latin
 #include "Ethiopic.h"
 #include "Euro.h"                      // Category=Latin
 #include "Farsi.h"                     // Category=Arabic
@@ -75,6 +78,7 @@
 #include "Kazakh.h"                    // Category=Arabic
 #include "Kharoshthi.h"                // Category=Indic
 #include "Khmer.h"
+#include "Klingon.h"                   // Category=ConScript
 #include "Kokuji.h"                    // Category=Japanese National characters
 #include "Lao.h"
 #include "LatinLigatures.h"            // Category=Latin
@@ -87,6 +91,7 @@
 #include "MathematicalLatin.h"
 #include "MathematicalNumerals.h"
 #include "MathematicalOperators.h"
+#include "Medical.h"
 #include "MeeteiMayak.h"               // Category=Indic
 #include "MendeKikakui.h"
 #include "MeroiticCursive.h"           // Category=Historic
@@ -107,9 +112,10 @@
 #include "Pashto.h"                    // Category=Arabic
 #include "PhagsPa.h"
 #include "Pinyin.h"                    // Category=Latin
-#include "Polynesian.h"
+#include "Polynesian.h"                // Category=Latin
 #include "PolytonicGreek.h"            // Category=Greek
 #include "Rejang.h"
+#include "Religion.h"
 #include "Romanian.h"                  // Category=Latin
 #include "Runic.h"
 #include "Saurashtra.h"                // Category=Indic
@@ -137,6 +143,7 @@
 #include "VedicExtensions.h"           // Category=Indic
 #include "Venda.h"
 #include "Vietnamese.h"                // Category=Latin
+#include "Weather.h"
 #include "WesternEuropean.h"           // Category=Latin
 #include "Yi.h"
 #include "ZhuYinFuHao.h"               // Category=Chinese Zhuyin phonetics (bopomofo)

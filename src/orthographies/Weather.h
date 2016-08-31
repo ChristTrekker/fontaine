@@ -1,40 +1,42 @@
 //
-// Food.h
+// Weather.h
 //
 // Contributed by christtrekker
-// 2015.06.30
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef FOOD
-#define FOOD
+#ifndef WEATHER
+#define WEATHER
 
-namespace Food{
+namespace Weather{
 
 //
-// Unicode values
+// Unicode values 
 //
 UINT32 values[]={
-	0x2615,
-	0x26FE,
 	START_RANGE_PAIR,
-	0x1F32D,0x1F32F,
+	0x2600,0x2603,
+	0x2607,
+	0x2608,
+	0x2614,
+	0x263C,
 	START_RANGE_PAIR,
-	0x1F33D,0x1F33F,
+	0x26C4,0x26C8,
 	START_RANGE_PAIR,
-	0x1F344,0x1F37F,
+	0x2744,0x2746,
 	START_RANGE_PAIR,
-	0x1F950,0x1F95E,
-	0x1F9C0,
+	0x1F300,0x1F302,
+	START_RANGE_PAIR,
+	0x1F321,0x1F32C,
 	END_OF_DATA
 };
 
 //
 // Sample sentences
-//
+// 
 const char *sentences[]={
 	"",
 	END_OF_DATA
@@ -42,12 +44,12 @@ const char *sentences[]={
 
 
 //
-//
+// 
 //
 OrthographyData data={
-	"Food and Drink", // Common name
-	"Food and Drink", // Native name
-	0x2615, // key
+	"Weather", // Common name
+	"Weather", // Native name
+	0x211E, // key
 	values,
 	"",// Sample characters
 	sentences

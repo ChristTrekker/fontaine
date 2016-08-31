@@ -9,9 +9,11 @@
 
 
 //
-// AleutCyrillic.h
+// EskaleutCyrillic.h
 //
 // Contributed by christtrekker
+// Of the Eskaleut languages, some Aleut and Yupik languages are written using
+// Cyrillic script.
 //
 
 #ifndef ORTHOGRAPHY_DATA
@@ -21,7 +23,7 @@
 #ifndef ALEUT_CYRILLIC
 #define ALEUT_CYRILLIC
 
-namespace AleutCyrillic{
+namespace EskaleutCyrillic{
 
 //
 // Unicode values 
@@ -56,8 +58,8 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"Aleut Cyrillic", // Common name
-	"Aleut Cyrillic", // Native name
+	"Eskaleut Cyrillic", // Common name
+	"Eskaleut Cyrillic", // Native name
 	0x0414, // CYRILLIC CAPITAL LETTER DE
 	values,
 	"", // Sample characters

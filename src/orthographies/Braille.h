@@ -1,34 +1,25 @@
 //
-// Food.h
+// Braille.h
 //
 // Contributed by christtrekker
-// 2015.06.30
+// 2015.08.13
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef FOOD
-#define FOOD
+#ifndef BRAILLE6 // 8-dot Braille is mainly specialty usage
+#define BRAILLE6
 
-namespace Food{
+namespace Braille6{
 
 //
 // Unicode values
 //
 UINT32 values[]={
-	0x2615,
-	0x26FE,
 	START_RANGE_PAIR,
-	0x1F32D,0x1F32F,
-	START_RANGE_PAIR,
-	0x1F33D,0x1F33F,
-	START_RANGE_PAIR,
-	0x1F344,0x1F37F,
-	START_RANGE_PAIR,
-	0x1F950,0x1F95E,
-	0x1F9C0,
+	0x2800,0x283F,
 	END_OF_DATA
 };
 
@@ -36,7 +27,7 @@ UINT32 values[]={
 // Sample sentences
 //
 const char *sentences[]={
-	"",
+	"⠃⠗⠇⠀⠊⠎⠀⠠⠃⠗⠁⠊⠇⠇⠑⠲",
 	END_OF_DATA
 };
 
@@ -45,9 +36,9 @@ const char *sentences[]={
 //
 //
 OrthographyData data={
-	"Food and Drink", // Common name
-	"Food and Drink", // Native name
-	0x2615, // key
+	"Braille", // Common name
+	"⠃⠗⠇", // Native name
+	0x2801, // key
 	values,
 	"",// Sample characters
 	sentences

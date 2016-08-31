@@ -1,34 +1,29 @@
 //
-// Food.h
+// Klingon.h
 //
 // Contributed by christtrekker
-// 2015.06.30
+// 2015.07.01
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef FOOD
-#define FOOD
+#ifndef KLINGON
+#define KLINGON
 
-namespace Food{
+namespace Klingon{
 
 //
 // Unicode values
 //
 UINT32 values[]={
-	0x2615,
-	0x26FE,
 	START_RANGE_PAIR,
-	0x1F32D,0x1F32F,
+	0xF8D0,0xF8E9,
 	START_RANGE_PAIR,
-	0x1F33D,0x1F33F,
+	0xF8F0,0xF8F9,
 	START_RANGE_PAIR,
-	0x1F344,0x1F37F,
-	START_RANGE_PAIR,
-	0x1F950,0x1F95E,
-	0x1F9C0,
+	0xF8FD,0xF8FF,
 	END_OF_DATA
 };
 
@@ -36,7 +31,7 @@ UINT32 values[]={
 // Sample sentences
 //
 const char *sentences[]={
-	"",
+	"?",
 	END_OF_DATA
 };
 
@@ -45,11 +40,11 @@ const char *sentences[]={
 //
 //
 OrthographyData data={
-	"Food and Drink", // Common name
-	"Food and Drink", // Native name
-	0x2615, // key
+	"Klingon", // Common name
+	" ", // Native name
+	0xF8FF, // key
 	values,
-	"",// Sample characters
+	"",// Sample characters
 	sentences
 };
 
