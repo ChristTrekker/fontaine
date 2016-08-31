@@ -340,13 +340,6 @@ bool FontFace::_checkOrthography( const OrthographyData *pData ){
 	std::vector<UTF32> missingValues;
 	
 	//
-	// Spot check using "key" value first
-	// to avoid wasting time:
-	// No: Computers so fast now, why risk false positive?
-	//
-	//if(!hasUnicodeValue(pData->key)) return false;
-	
-	//
 	// Check all values in the orthography:
 	//
 	for(int i=0;pData->values[i];i++){
