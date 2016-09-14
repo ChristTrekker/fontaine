@@ -65,6 +65,8 @@
 #include "Hangul.h"                    // Category=Korean
 #include "Hanunoo.h"                   // Category=Philippine
 #include "Hebrew.h"
+#include "HebrewCantillation.h"
+#include "HebrewNiqqud.h"
 #include "IPA.h"                       // Category=Latin
 #include "IgboOnwu.h"
 #include "Jamo.h"                      // Category=Korean Includes BOTH Jamo and Compatability Jamo blocks

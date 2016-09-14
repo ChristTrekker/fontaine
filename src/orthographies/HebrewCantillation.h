@@ -1,7 +1,7 @@
 //
 // The Fontaine Font Analysis Project 
 // 
-// Copyright (c) 2009 by Edward H. Trager
+// Copyright (c) 2016
 // All Rights Reserved
 // 
 // Released under the GNU GPL version 2.0 or later.
@@ -9,24 +9,24 @@
 
 
 //
-// Hebrew.h
+// HebrewCantillation.h
 //
 
 #ifndef ORTHOGRAPHY_DATA
 #include "../OrthographyData.h"
 #endif
 
-#ifndef HEBREW
-#define HEBREW
+#ifndef HEBREW_CANTILLATION
+#define HEBREW_CANTILLATION
 
-namespace Hebrew{
+namespace HebrewCantillation{
 
 //
 // Unicode values 
 //
 UINT32 values[]={
 	START_RANGE_PAIR,
-	0x05d0,0x05ea,
+	0x0591,0x05af,
 	END_OF_DATA
 };
 
@@ -34,8 +34,7 @@ UINT32 values[]={
 // Sample sentences
 // 
 const char *sentences[]={
-	"זה כיף סתם לשמוע איך תנצח קרפד עץ טוב בגן",
-	"כך התרסק נפץ על גוזל קטן, שדחף את צבי למים",
+	"",
 	END_OF_DATA
 };
 
@@ -44,11 +43,11 @@ const char *sentences[]={
 // 
 //
 OrthographyData data={
-	"Hebrew", // Common name
-	"עִבְרִית", // Native name
-	0x05d0, // HEBREW ALEF
+	"Hebrew Cantillation", // Common name
+	"טעמי המקרא", // Native name
+	0x0591, // ETNAHTA
 	values,
-	"א ב ד ה ו ז ח ט י", // Sample characters
+	"", // Sample characters
 	sentences
 };
 

@@ -421,9 +421,7 @@ bool FontFace::_checkOrthography( const OrthographyData *pData ){
 //
 void FontFace::checkOrthographies(void){
 	
-	//
-	// Latin:
-	//
+	// LATIN:
 	if( _checkOrthography( BasicLatin::pData ) ){
 		// European large orthography groups:
 		_checkOrthography(WesternEuropean::pData);
@@ -469,9 +467,7 @@ void FontFace::checkOrthographies(void){
 	_checkOrthography(BasicCyrillic::pData);
 	_checkOrthography(EskaleutCyrillic::pData);
 	
-	//
-	// Arabic:
-	//
+	// ARABIC:
 	if(_checkOrthography(Arabic::pData)){
 		_checkOrthography(Farsi::pData);
 		_checkOrthography(Urdu::pData);
@@ -480,7 +476,13 @@ void FontFace::checkOrthographies(void){
 		_checkOrthography(Sindhi::pData);
 		_checkOrthography(Uighur::pData);
 	}
-	
+
+	// HEBREW:
+	if(_checkOrthography(Hebrew::pData)) {
+		_checkOrthography(HebrewCantillation::pData);
+		_checkOrthography(HebrewNiqqud::pData);
+	}
+
 	//
 	// CJK:
 	//
@@ -599,7 +601,6 @@ void FontFace::checkOrthographies(void){
 	_checkOrthography(Chakma::pData);
 	_checkOrthography(Cherokee::pData);
 	_checkOrthography(Georgian::pData);
-	_checkOrthography(Hebrew::pData);
 	_checkOrthography(Khmer::pData);
 	_checkOrthography(Lao::pData);
 	_checkOrthography(MendeKikakui::pData);
