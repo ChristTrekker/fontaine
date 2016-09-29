@@ -457,8 +457,11 @@ void FontFace::checkOrthographies(void){
 	_checkOrthography(Coptic::pData);
 	
 	// CYRILLIC:
-	_checkOrthography(BasicCyrillic::pData);
-	_checkOrthography(EskaleutCyrillic::pData);
+	if(_checkOrthography(BasicCyrillic::pData)) {
+		_checkOrthography(SlavicCyrillic::pData);
+		_checkOrthography(AsianCyrillic::pData);
+		_checkOrthography(EskaleutCyrillic::pData);
+	}
 	
 	// ARABIC:
 	if(_checkOrthography(Arabic::pData)){

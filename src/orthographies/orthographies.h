@@ -19,6 +19,7 @@
 #include "Arabic.h"                    // Category=Arabic
 #include "ArchaicGreekLetters.h"       // Category=Greek
 #include "Armenian.h"
+#include "AsianCyrillic.h"             // Category=Cyrillic
 #include "Astronomy.h"
 #include "Balinese.h"
 #include "Baltic.h"                    // Category=Latin
@@ -124,6 +125,7 @@
 #include "SimplifiedChinese.h"         // Category=Chinese Top 3500 simplified
 #include "Sindhi.h"                    // Category=Arabic
 #include "Sinhala.h"                   // Category=Indic
+#include "SlavicCyrillic.h"            // Category=Cyrillic
 #include "SouthKoreanHanja.h"          // Category=Korean list of 1800 Hanja taught in South Korean schools
 #include "Sundanese.h"
 #include "SylotiNagri.h"               // Category=Indic
