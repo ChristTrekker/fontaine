@@ -426,6 +426,7 @@ void FontFace::checkOrthographies(void){
 		_checkOrthography(Catalan::pData);
 		_checkOrthography(Dutch::pData);
 		_checkOrthography(Esperanto::pData);
+		_checkOrthography(LatinConstructs::pData);
 		_checkOrthography(Romanian::pData);
 		_checkOrthography(Turkish::pData);
 		// African continent:

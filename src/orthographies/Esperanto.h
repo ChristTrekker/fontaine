@@ -22,9 +22,20 @@ namespace Esperanto{
 
 //
 // Unicode values 
+// Reduced Basic Latin character set plus
 // Extended Latin characters unique to Esperanto:
 //
 UINT32 values[]={
+	START_RANGE_PAIR,
+	0x0041,0x0050,
+	START_RANGE_PAIR,
+	0x0052,0x0056,
+	0x005A,
+	START_RANGE_PAIR,
+	0x0061,0x0070,
+	START_RANGE_PAIR,
+	0x0072,0x0076,
+	0x007A,
 	START_RANGE_PAIR,
 	0x0108, // Ĉ
 	0x0109, // ĉ

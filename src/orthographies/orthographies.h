@@ -84,6 +84,7 @@
 #include "Klingon.h"                   // Category=ConScript
 #include "Kokuji.h"                    // Category=Japanese National characters
 #include "Lao.h"
+#include "LatinConstructs.h"           // Category=Latin
 #include "LatinLigatures.h"            // Category=Latin
 #include "Lepcha.h"                    // Category=Indic
 #include "Limbu.h"                     // Category=Indic
