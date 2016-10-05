@@ -33,13 +33,8 @@ UINT32 values[]={
 	0x2cb2,0x2cdb, // Old Coptic & Dialect letters
 	START_RANGE_PAIR,
 	0x2cdc,0x2ce3, // Old Nubian
-	START_RANGE_PAIR,
-	0x2ce4,0x2cea, // Symbols
-	START_RANGE_PAIR,
-	0x2cf9,0x2cfc, // Old Nubian Punctuation
-	0x2cfd,
-	0x2cfe,
-	0x2cff,
+	0x2cf2,
+	0x2cf3,
 	END_OF_DATA
 };
 
